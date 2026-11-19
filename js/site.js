@@ -9,7 +9,7 @@
     h_lead: "Jovix فريق هندسي بيبني اللي الشركة بتشتغل عليه: Odoo وأنظمة إدارة الأعمال، الموارد البشرية والتوظيف، الأتمتة، وكلاء الذكاء الاصطناعي، حلول AI لكل فريق، ومواقع الشركات. بنطوّر اللي عندك بالفعل، أو نبنيه من جديد لو ده الأنسب.",
     h_cta1: "ابدأ مشروعك", h_cta2: "شوف شغلنا", h_s1: "أول مكالمة مجانية", h_s2: "عرض مكتوب", h_s3: "عربي وإنجليزي",
     h_cap: "وكيل خدمة عملاء بيرد على الطلبات في واتساب", demo: "بيانات تجريبية",
-    f1b: "Odoo 16 و17 و18 و19", f1s: "تسطيب وموديولات مخصصة وتحديث نسخ",
+    f1b: "Odoo من 14 لـ 19", f1s: "تسطيب وموديولات مخصصة وتحديث نسخ",
     f2b: "عربي وإنجليزي", f2s: "الشاشات والمستندات والدعم",
     f3b: "سعر ثابت ومكتوب", f3s: "متفق عليه قبل ما الشغل يبدأ",
     f4b: "ملكك من أول يوم", f4s: "الكود والبيانات والحسابات باسمك",
@@ -34,7 +34,7 @@
     p1b: "نفهم", p1p: "مكالمة مجانية، وبعدها وقت مع الناس اللي بتعمل الشغل، علشان نعرف الوقت بيضيع فين.",
     p2b: "نعرض", p2p: "النطاق والمدة وسعر ثابت مكتوب. مفيش حاجة بتبدأ غير بموافقتك.",
     p3b: "نبني", p3p: "نسخة شغالة بدري، وبعدها عرض كل أسبوع علشان توجّه الشغل.",
-    p4b: "نطلق ونفضل معاك", p4p: "ننقل البيانات وندرّب فريقك، ونفضل معاك على الواتساب بعد التشغيل.",
+    p4b: "بنسلّم ونفضل معاك", p4p: "ننقل البيانات وندرّب فريقك، ونفضل معاك على الواتساب بعد التشغيل.",
     tr_label: "ليه Jovix", tr_h: "ليه الشركات بتأمّنا على أنظمتها",
     c1: "تجزئة", c2: "أغذية ومشروبات", c3: "تصنيع", c4: "توزيع", c5: "عقارات", c6: "إعلام وسينما", c7: "تعليم", c8: "موارد بشرية ومرتبات",
     v1b: "المهندس اللي بتكلمه هو اللي بيبني الحل", v1p: "مفيش طبقة مبيعات، ولا تسليم الشغل لناس عمرك ما قابلتهم.",
@@ -67,7 +67,7 @@
     fn5: "دورة الشغل", fn5s: "قواعد ومراجعة وموافقات", fn6: "سجل في Odoo", fn6s: "فاتورة أو عميل أو طلب", fn7: "موافقة", fn7s: "للشخص المناسب",
     fn8: "تنبيه واتساب", fn8s: "للفريق أو العميل", fn9: "تقرير يومي", fn9s: "كل يوم الساعة 8:00",
     ev_h: "اللي بيحصل", ev_live: "مثال حي",
-    st1: "موديول ومشروع اتسلموا", st2: "نسخ Odoo، من 16 لـ 19", st3: "مجالات اشتغلنا فيها", st4: "لغتين، عربي وإنجليزي",
+    st1: "موديول ومشروع اتسلموا", st2: "نسخ Odoo، من 14 لـ 19", st3: "مجالات اشتغلنا فيها", st4: "لغتين، عربي وإنجليزي",
     nav6: "أتمتة التوظيف", o0: "أتمتة التوظيف",
     rc_label: "أتمتة التوظيف", rc_h: "توظيف بيمشي لوحده، من الإعلان للقائمة المختصرة",
     rc_p: "بيحل محل عملية التوظيف اليدوية من أولها لآخرها. الـ HR مش هيقرا أكوام سير ذاتية ولا يجري ورا متقدمين، وبيدخل بس في القرار الأخير.",
@@ -82,7 +82,8 @@
     rc_w2: "كمنتج سحابي", rc_w2p: "من غير Odoo. سجّل، انشر وظيفة، وابدأ توظيف.", rc_w2t: "قريبًا",
     rc_cta: "احجز عرض تجريبي", rc_cta2: "سجّل في القائمة الأولى",
     priv: "الخصوصية",
-    nav7: "وكلاء AI", skip: "روح للمحتوى", cube_pre: "بنبني", sysv_cta: "عايز السيستم ده", open_sys: "ادخل جوه السيستم",
+    nav7: "وكلاء AI", skip: "روح للمحتوى", cta_site: "الموقع ده تصميم وتنفيذ فريق Jovix، وموقع شركتك ممكن يطلع كده أو أحسن.",
+    cs1: "تبعتلنا المشكلة", cs2: "نكلمك ونفهم الشغل", cs3: "يوصلك عرض مكتوب بسعر ثابت", cs_h: "اللي هيحصل بعد ما تبعت", cube_pre: "بنبني", sysv_cta: "عايز السيستم ده", open_sys: "ادخل جوه السيستم",
     more_link: "شوف الشغل", rc_more: "شوف بيشتغل إزاي", wk_p2: "أكتر من 25 مشروع في Odoo والموارد البشرية والأتمتة والوكلاء والـ AI والمواقع. ودول تلاتة منهم.", wk_all: "شوف كل شغلنا",
     w_t1: "مبيعات العربيات لمصنع مكرونة", w_m1: "Odoo", w_t2: "التوظيف من الإعلان للقائمة المختصرة", w_m2: "الموارد البشرية والتوظيف", w_t3: "وكيل واتساب لموزّع أغذية", w_m3: "وكيل AI",
     br_tag: "بياناتك بتدخل، والقرارات بتطلع",
@@ -96,13 +97,13 @@
     hq4: "الـ HR يقدر يغيّر القرار؟", ha4: "دايمًا. السيستم بيرتّب ويشرح، والـ HR بيوافق أو يرفض أو ينقل أي متقدم.",
     cta_h: 'قولنا <span class="warm">المشكلة.</span> وهنوريك الحل.', cta_form: "ابعتلنا التفاصيل",
     h_1: 'احكيلنا <span class="warm">المشكلة.</span>',
-    ft_tag: 'احكيلنا <span class="warm">المشكلة.</span> والحل علينا.', ft_h1: "الخدمات", ft_h2: "الشركة", ft_h3: "تواصل",
+    ft_tag: 'احكيلنا <span class="warm">المشكلة.</span> <strong class="good">والحل علينا.</strong>', ft_h1: "الخدمات", ft_h2: "الشركة", ft_h3: "تواصل",
     ft_l1: "Odoo وأنظمة الأعمال", ft_l2: "أتمتة التوظيف", ft_l3: "الأتمتة", ft_l4: "وكلاء AI", ft_l5: "AI لفريقك", ft_l6: "مواقع الشركات", ft_l7: "طريقة شغلنا", ft_l8: "الأسئلة", ft_base: "عربي وإنجليزي · مصر", ag_label: "وكلاء الذكاء الاصطناعي", ag_h: "أكتر أربع وكلاء الشركات بتطلبهم مننا",
     ag_p: "كل وكيل مربوط ببياناتك وأنظمتك، وبيشتغل بالعربي أو الإنجليزي، وبيحوّل لشخص من فريقك لما يكون ده الصح.", ag_live: "مثال توضيحي",
-    pr_label: "بنشتغل معاك إزاي", pr_h: "بنسمعك، ونحلها معاك خطوة بخطوة، ونفضل معاك نتأكد إن كل حاجة بتتحسن",
-    pr_p: "شريك من أول كلمة لحد بعد التشغيل بكتير. اختار أي خطوة أو سيبها تمشي لوحدها.",
+    pr_label: "بنشتغل معاك إزاي", pr_h: "بنسمعك، ونحل المشكلة معاك خطوة بخطوة، ونتابع معاك لحد ما تتأكد إن كل حاجة بقت أحسن",
+    pr_p: "معاك من أول مكالمة لحد ما الشغل يمشي لوحده، وبعدها كمان. اختار أي خطوة أو سيبها تعرض نفسها.",
     j1b: "بنسمعك", j1s: "مشكلتك بكلامك إنت", j2b: "بنخطط مع بعض", j2s: "النطاق والخطوات وسعر ثابت", j3b: "بنبني خطوة بخطوة", j3s: "عرض كل أسبوع",
-    j4b: "بنطلق معاك", j4s: "البيانات اتنقلت والفريق اتدرب", j5b: "بنفضل معاك ونحسّن", j5s: "متابعة وتحسينات جديدة",
+    j4b: "بنسلّمك الشغل وإحنا جنبك", j4s: "البيانات اتنقلت والفريق اتدرب", j5b: "بنتابع معاك", j5s: "متابعة شهرية وتحسينات",
     c9: "لوجستيات", o7: "موارد بشرية أو مرتبات أو توظيف"
   };
 
@@ -159,6 +160,20 @@
         ["تقرير الصبح على الواتساب", "المبيعات والكاش والمخزون في رسالة قصيرة كل يوم."],
         ["إيه اللي اتغير وليه", "أي تغيير في المبيعات أو التكاليف بيتوضح ومعاه السبب المحتمل."]] }
     ]
+  };
+  var ROLE_RESULT = {
+    en: [["4 of 46 applicants shortlisted", "Interview score 86 / 100", "Post published in minutes"],
+         ["Quote reminder sent on day 3", "Order status answered in seconds", "Pipeline summary every Sunday"],
+         ["Bill matched to PO-1043", "112 bank lines matched", "Unknown 8,000 EGP flagged"],
+         ["Dairy alert for Branch 3", "Reorder: 40 cases, ready to approve", "Delivery 5512 tracked to the door"],
+         ["38 questions answered this morning", "Hand-over with the full chat", "Ticket T-201 assigned to quality"],
+         ["Why Branch 3 dropped, in one line", "Sales, cash and stock at 8:00", "Enquiries up 22%, bookings down 9%"]],
+    ar: [["4 من 46 متقدم في القائمة المختصرة", "تقييم المقابلة 86 / 100", "الإعلان بيتنشر في دقايق"],
+         ["تذكير بعرض السعر في اليوم التالت", "حالة الطلب بتترد في ثواني", "ملخص الصفقات كل أحد"],
+         ["الفاتورة اتطابقت مع PO-1043", "112 حركة بنك اتطابقت", "تحويل مجهول بـ 8,000 جنيه اتعلّم عليه"],
+         ["تنبيه ألبان لفرع 3", "إعادة طلب 40 كرتونة جاهزة للموافقة", "الشحنة 5512 متتبعة لحد الباب"],
+         ["38 سؤال اترد عليهم الصبح", "تحويل لفريقك ومعاه المحادثة كاملة", "الشكوى T-201 اتحوّلت للجودة"],
+         ["ليه فرع 3 نزل، في سطر واحد", "المبيعات والكاش والمخزون الساعة 8", "الاستفسارات +22% والحجوزات -9%"]]
   };
   var ROLE_UI = { en: { cta: "Talk about this for my team", n: "Solution" }, ar: { cta: "كلمنا عن ده لفريقك", n: "حل" } };
 
@@ -348,11 +363,11 @@
     for (var i = 0; i < o.n; i++) { var t = document.createElement("div"); t.className = "mo-t"; t.innerHTML = '<span class="a"></span><span class="b"></span><em></em>'; body.appendChild(t); tok.push(t); }
     var rnd = function (a, b) { return a + Math.random() * (b - a); };
     function chaos(el, i) {
-      el.style.left = rnd(1, 50).toFixed(1) + "%"; el.style.top = rnd(0, 100 - 100 / rows).toFixed(1) + "%";
+      el.style.setProperty("--x", rnd(1, 50).toFixed(1)); el.style.setProperty("--y", rnd(0, 100 - 100 / rows).toFixed(1));
       el.style.transform = "rotate(" + rnd(-13, 13).toFixed(1) + "deg) scale(" + rnd(.88, 1).toFixed(2) + ")"; el.style.transitionDelay = (i * 0.025) + "s";
     }
     function order(el, i) {
-      el.style.left = (i % 2 ? 51 : 0) + "%"; el.style.top = (((i / 2) | 0) * 100 / rows).toFixed(2) + "%";
+      el.style.setProperty("--x", i % 2 ? 51 : 0); el.style.setProperty("--y", (((i / 2) | 0) * 100 / rows).toFixed(2));
       el.style.transform = "none"; el.style.transitionDelay = (0.05 + i * 0.045) + "s";
     }
     function solve(d, sc) { body.classList.add("solved"); state.textContent = d.done; state.classList.add("ok"); title.textContent = sc.s; tok.forEach(order); }
@@ -364,10 +379,13 @@
         foot.innerHTML = d.scenes.map(function (x, k) { return '<button type="button" role="tab" aria-selected="' + (k === i) + '" data-i="' + k + '"><span class="bar"></span>' + esc(x.k) + '</button>'; }).join("");
       }
       body.classList.remove("solved"); state.textContent = d.prob; state.classList.remove("ok"); title.textContent = sc.p;
+      var first = !body.dataset.ready;
+      if (first) body.classList.add("no-anim");
       tok.forEach(function (t, k) {
         t.querySelector(".a").textContent = sc.a[k]; t.querySelector(".b").textContent = sc.b[k]; t.querySelector("em").textContent = sc.hi || "";
         t.classList.toggle("hi", !!sc.hi && k < (sc.hn || 4)); chaos(t, k);
       });
+      if (first) { void body.offsetWidth; body.classList.remove("no-anim"); body.dataset.ready = "1"; }
       if (reduce) { solve(d, sc); return; }
       later(o.wait || 1800, function () { sweep.classList.remove("go"); void sweep.offsetWidth; sweep.classList.add("go"); });
       later((o.wait || 1800) + 400, function () { solve(d, sc); });
@@ -469,9 +487,57 @@
   };
 
   var heroMorph = makeMorph(document.getElementById("morph"), { n: 12, tabs: true, data: function () { return MO[lang]; } });
-  var roleMorph = makeMorph(document.getElementById("role-morph"), { n: 8, data: function () { return MO_ROLE[lang]; }, cycle: 6000, wait: 1600 });
-  var trustMorph = makeMorph(document.getElementById("trust-morph"), { n: 8, data: function () { return MO_TRUST[lang]; }, cycle: 6400, wait: 1800 });
-  function moBuild() { heroMorph.play(heroMorph.current()); roleMorph.play(role); trustMorph.play(0); }
+  var ROLE_NOTES = {
+    en: [
+      [["Hiring", "Shortlist ready for Sales Representative: 4 of 46 applicants", "08:10"], ["Hiring", "Nour Ahmed finished her interview. Score 86 / 100", "10:42"], ["Hiring", "Final interview booked for Sunday at 11:00", "11:05"]],
+      [["Sales", "New enquiry from Delta Foods: 50 units, needs a quote", "09:20"], ["Sales", "Quote Q-118 has not been opened for 3 days. Reminder sent", "12:00"], ["Sales", "Call booked with Nile Pharma, Thursday 11:00. Summary sent to Karim", "14:35"]],
+      [["Finance", "112 bank lines matched to invoices", "08:00"], ["Finance", "3 lines need review, including an unknown 8,000 EGP transfer", "08:01"], ["Finance", "Supplier bill BILL/0412 ready for your approval", "10:15"]],
+      [["Operations", "Dairy in Branch 3 will run out by Thursday", "07:45"], ["Operations", "Reorder ready: 40 cases of dairy for Branch 3", "07:46"], ["Operations", "Delivery 5512 reached Al Salam Market", "13:20"]],
+      [["Customer service", "38 questions answered this morning, 2 handed to your team", "12:00"], ["Customer service", "Complaint T-201 assigned to Ahmed in quality", "12:04"], ["Customer service", "T-198 closed. The customer rated the reply 5 / 5", "15:30"]],
+      [["Morning summary", "Sales are up 6.4% on last month", "08:00"], ["Morning summary", "Branch 3 is below target: dairy was out of stock on Tuesday", "08:00"], ["Morning summary", "Enquiries up 22%, bookings down 9%. Review follow-up with sales", "08:00"]]
+    ],
+    ar: [
+      [["التوظيف", "القائمة المختصرة لمندوب المبيعات جاهزة: 4 من 46 متقدم", "08:10"], ["التوظيف", "نور أحمد خلّصت المقابلة. التقييم 86 / 100", "10:42"], ["التوظيف", "المقابلة النهائية اتحجزت الأحد الساعة 11", "11:05"]],
+      [["المبيعات", "استفسار جديد من Delta Foods: 50 وحدة ومحتاجين عرض سعر", "09:20"], ["المبيعات", "عرض السعر Q-118 متفتحش من 3 أيام، واتبعت تذكير", "12:00"], ["المبيعات", "اتحجزت مكالمة مع Nile Pharma الخميس 11، والملخص اتبعت لكريم", "14:35"]],
+      [["الحسابات", "112 حركة بنك اتطابقت مع الفواتير", "08:00"], ["الحسابات", "3 حركات محتاجة مراجعة، منهم تحويل مجهول بـ 8,000 جنيه", "08:01"], ["الحسابات", "فاتورة المورد BILL/0412 مستنية موافقتك", "10:15"]],
+      [["التشغيل", "الألبان في فرع 3 هتخلص قبل الخميس", "07:45"], ["التشغيل", "إعادة الطلب جاهزة: 40 كرتونة ألبان لفرع 3", "07:46"], ["التشغيل", "الشحنة 5512 وصلت ماركت السلام", "13:20"]],
+      [["خدمة العملاء", "اترد على 38 سؤال الصبح، واتحوّل 2 لفريقك", "12:00"], ["خدمة العملاء", "الشكوى T-201 اتحوّلت لأحمد في الجودة", "12:04"], ["خدمة العملاء", "T-198 اتقفلت، والعميل قيّم الرد 5 / 5", "15:30"]],
+      [["ملخص الصبح", "المبيعات زادت 6.4% عن الشهر اللي فات", "08:00"], ["ملخص الصبح", "فرع 3 تحت التارجت: الألبان خلصت يوم التلات", "08:00"], ["ملخص الصبح", "الاستفسارات زادت 22% والحجوزات قلّت 9%. راجع المتابعة مع المبيعات", "08:00"]]
+    ]
+  };
+  var roleFlowEl = document.getElementById("role-morph"), rfTimers = [];
+  function roleFlow(i) {
+    if (!roleFlowEl) return;
+    rfTimers.forEach(clearTimeout); rfTimers = [];
+    var notes = ROLE_NOTES[lang][i] || ROLE_NOTES[lang][0];
+    roleFlowEl.className = "rnotes";
+    roleFlowEl.innerHTML = '<div class="rn-head"><b>' + (lang === "ar" ? "اللي بيوصلك على الموبايل" : "What reaches your phone") + '</b><span>' + (lang === "ar" ? "مثال" : "Example") + '</span></div><div class="rn-list"></div>';
+    var list = roleFlowEl.querySelector(".rn-list");
+    function add(k) {
+      var n = notes[k], el = document.createElement("div");
+      el.className = "rn"; el.innerHTML = '<span class="rn-ic" aria-hidden="true"></span><div><small>' + esc(n[0]) + ' · <span dir="ltr">' + n[2] + '</span></small><p>' + esc(n[1]) + '</p></div>';
+      list.appendChild(el);
+    }
+    if (reduce) { notes.forEach(function (_, k) { add(k); }); return; }
+    notes.forEach(function (_, k) { rfTimers.push(setTimeout(function () { add(k); }, 250 + k * 900)); });
+  }
+  var roleMorph = { play: roleFlow };
+  var PROPOSAL = {
+    en: { h: "Proposal", rows: [["Scope", "Written, item by item"], ["Timeline", "Four dated milestones"], ["Price", "Fixed, agreed in advance"], ["Demos", "Every week"], ["Code and accounts", "In your name"]], stamp: "Agreed" },
+    ar: { h: "العرض", rows: [["النطاق", "مكتوب بند بند"], ["المدة", "أربع مراحل بمواعيد"], ["السعر", "ثابت ومتفق عليه مقدمًا"], ["العروض", "كل أسبوع"], ["الكود والحسابات", "باسمك"]], stamp: "اتفقنا" }
+  };
+  var propEl = document.getElementById("trust-morph");
+  function proposal() {
+    if (!propEl) return;
+    var d = PROPOSAL[lang];
+    propEl.className = "prop";
+    propEl.innerHTML = '<div class="prop-paper"><div class="prop-top"><b>' + esc(d.h) + '</b><small dir="ltr">JX-2026-014</small></div>' +
+      d.rows.map(function (r, k) { return '<div class="prop-row r' + k + '"><span>' + esc(r[0]) + '</span><b>' + esc(r[1]) + '</b><i></i></div>'; }).join("") +
+      '<div class="prop-sign"><svg viewBox="0 0 160 40"><path d="M6 30c14-18 22-22 26-12s-6 14 2 10 14-20 20-14-4 16 4 12 16-14 24-10 6 10 16 8 22-12 30-10"/></svg><span class="prop-stamp">' + esc(d.stamp) + '</span></div></div>';
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (es, ob) { if (es[0].isIntersecting) { propEl.classList.add("go"); ob.disconnect(); } }, { threshold: .4 }).observe(propEl);
+    else propEl.classList.add("go");
+  }
+  function moBuild() { heroMorph.play(heroMorph.current()); roleFlow(role); proposal(); }
 
   /* roles */
   var roleList = document.getElementById("role-list"), rolePanel = document.getElementById("role-panel");
@@ -488,7 +554,8 @@
     var r = ROLES[lang][role], ui = ROLE_UI[lang];
     rolePanel.setAttribute("aria-labelledby", "role-" + role);
     document.getElementById("role-text").innerHTML = '<h3>' + esc(r.t) + '</h3><div class="role-items">' + r.items.map(function (it, i) {
-      return '<div class="role-item"><i>' + ui.n + ' 0' + (i + 1) + '</i><b>' + esc(it[0]) + '</b><span>' + esc(it[1]) + '</span></div>';
+      var res = (ROLE_RESULT[lang][role] || [])[i];
+      return '<div class="role-item"><i>' + ui.n + ' 0' + (i + 1) + '</i><b>' + esc(it[0]) + '</b><span>' + esc(it[1]) + '</span>' + (res ? '<em class="role-res">' + esc(res) + '</em>' : '') + '</div>';
     }).join("") + '</div><div class="role-foot"><span>' + esc(r.w) + '</span><a class="btn solid" target="_blank" rel="noopener" href="https://wa.me/201283450444?text=' +
       encodeURIComponent((lang === "ar" ? "أهلًا Jovix، عايز أعرف أكتر عن حلول AI " : "Hello Jovix, I'd like to hear more about AI ") + r.t.toLowerCase()) + '">' + esc(ui.cta) + '</a></div>';
     var rt = document.getElementById("role-text"); if (animate) { rt.classList.remove("fade-swap"); void rt.offsetWidth; rt.classList.add("fade-swap"); }
@@ -581,6 +648,34 @@
   }
   if (form) { form.addEventListener("input", compose); form.addEventListener("submit", function (e) { e.preventDefault(); }); }
 
+  /* e-mail links open a ready-to-send message; on desktop, Gmail in a new tab when no mail app is set up */
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest('a[href^="mailto:"]'); if (!a) return;
+    var to = a.getAttribute("href").slice(7).split("?")[0], subject = lang === "ar" ? "استفسار عن مشروع" : "Project enquiry", body = lang === "ar" ? "أهلًا Jovix،\n\nمحتاج مساعدة في:\n" : "Hello Jovix,\n\nI need help with:\n";
+    e.preventDefault();
+    if (window.matchMedia("(pointer: fine)").matches) {
+      var w = window.open("https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(to) + "&su=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body), "_blank", "noopener,noreferrer");
+      if (w) return;
+    }
+    location.href = "mailto:" + to + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  });
+
+  /* moving between pages: the current page slides up and away, the next one rises in, like scrolling on */
+  (function () {
+    if (reduce || "onpagereveal" in window) return;
+    document.documentElement.classList.add("pt-enter");
+    requestAnimationFrame(function () { requestAnimationFrame(function () { document.documentElement.classList.remove("pt-enter"); }); });
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest("a[href]"); if (!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || a.target === "_blank") return;
+      var url = new URL(a.href, location.href);
+      if (url.origin !== location.origin || !/\.html$|\/$/.test(url.pathname) || url.pathname === location.pathname) return;
+      e.preventDefault();
+      document.documentElement.classList.add("pt-leave");
+      setTimeout(function () { location.href = url.href; }, 280);
+    });
+    window.addEventListener("pageshow", function (ev) { if (ev.persisted) document.documentElement.classList.remove("pt-leave"); });
+  })();
+
   /* theme */
   document.getElementById("theme").addEventListener("click", function () {
     var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
@@ -591,15 +686,23 @@
   /* automation flow: packets and activity feed */
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var fsvg = document.getElementById("flow-svg"), NS = "http://www.w3.org/2000/svg", feed = document.getElementById("events"), evi = 0, flowVisible = false;
+  var pathPts = {};
+  function samples(id) {
+    if (pathPts[id]) return pathPts[id];
+    var el = document.getElementById(id), L = el.getTotalLength(), pts = [];
+    for (var s = 0; s <= 48; s++) { var q = el.getPointAtLength(L * s / 48); pts.push([q.x, q.y]); }
+    return (pathPts[id] = pts);
+  }
+  // the moving dots live on their own layer above the drawing, so the drawing itself never repaints
+  var pktLayer = null;
   function packet(a, b) {
-    var c = document.createElementNS(NS, "circle"); c.setAttribute("r", "6"); c.setAttribute("class", "pkt"); fsvg.appendChild(c);
-    var pa = document.getElementById(a), pb = document.getElementById(b), la = pa.getTotalLength(), lb = pb.getTotalLength(), t0 = null, dur = 2600;
-    (function f(t) {
-      if (t0 === null) t0 = t;
-      var k = (t - t0) / dur; if (k > 1) { c.remove(); return; }
-      var pt = k < .5 ? pa.getPointAtLength(la * k * 2) : pb.getPointAtLength(lb * (k - .5) * 2);
-      c.setAttribute("cx", pt.x); c.setAttribute("cy", pt.y); requestAnimationFrame(f);
-    })(performance.now());
+    if (!pktLayer) { pktLayer = document.createElement("div"); pktLayer.className = "pkt-layer"; fsvg.parentNode.appendChild(pktLayer); }
+    var r0 = fsvg.getBoundingClientRect(), host = fsvg.parentNode.getBoundingClientRect(), sc = r0.width / 1000, ox = r0.left - host.left, oy = r0.top - host.top;
+    var pts = samples(a).concat(samples(b)).map(function (q) { return [ox + q[0] * sc, oy + q[1] * sc]; });
+    var dot = document.createElement("span"); dot.className = "pkt-dot"; pktLayer.appendChild(dot);
+    if (!dot.animate) { dot.remove(); return; }
+    var frames = pts.filter(function (_, i) { return i % 4 === 0 || i === pts.length - 1; }).map(function (q) { return { transform: "translate(" + q[0].toFixed(1) + "px," + q[1].toFixed(1) + "px)" }; });
+    dot.animate(frames, { duration: 2600, easing: "linear" }).onfinish = function () { dot.remove(); };
   }
   function stamp(m) { var d = new Date(Date.now() - m * 60000); return ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2); }
   function pushEvent(minsAgo) {
@@ -614,7 +717,7 @@
   if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { flowVisible = es[0].isIntersecting; }).observe(fsvg);
   if (!reduce) {
     var fi = 0;
-    setInterval(function () { if (!flowVisible || document.hidden) return; packet("i" + (fi % 4), "o" + ((fi * 3 + 1) % 4)); fi++; }, 700);
+    setInterval(function () { if (!flowVisible || document.hidden) return; packet("i" + (fi % 4), "o" + ((fi * 3 + 1) % 4)); fi++; }, 900);
     setInterval(function () { if (flowVisible && !document.hidden) pushEvent(0); }, 2600);
   }
   document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", fillFeed); });
@@ -662,8 +765,8 @@
         x: '<div class="map"><span>واتساب</span><em>&larr;</em><span>وكيل الطلبات</span><em>&larr;</em><span>طلبات Odoo</span><em>&larr;</em><span>المخزن</span><em>&larr;</em><span>تقرير يومي</span></div><span class="price">النطاق والمدة والسعر بموافقتك</span>' },
       { h: "بنبني خطوة بخطوة", p: "عرض شغال كل أسبوع، فتقدر توجّه الشغل قبل ما أي حاجة تتقفل.",
         x: '<div class="weeks"><div class="wk"><span>الأسبوع 1</span><span class="tr"><i class="w100"></i></span><small>عرض</small></div><div class="wk"><span>الأسبوع 2</span><span class="tr"><i class="w100 d2"></i></span><small>عرض</small></div><div class="wk"><span>الأسبوع 3</span><span class="tr"><i class="w60 d3"></i></span><small>شغالين</small></div></div>' },
-      { h: "بنطلق معاك", p: "بننقل البيانات وندرّب فريقك ونعمل التحويل وإحنا جنبك.",
-        x: '<div class="checks"><span>البيانات اتنقلت</span><span>الفريق اتدرب</span><span>الخطوات القديمة اتلغت</span><span>دعم على الواتساب</span></div><span class="switch"><i></i>شغال</span>' },
+      { h: "بنسلّمك الشغل خطوة بخطوة", p: "بننقل البيانات وندرّب فريقك، ونفضل جنبك يوم ورا يوم لحد ما الكل يشتغل عليه براحته.",
+        x: '<div class="checks"><span>البيانات اتنقلت</span><span>الفريق اتدرب</span><span>الخطوات القديمة اتلغت</span><span>دعم على الواتساب</span></div><span class="switch"><i></i>اتسلّم</span>' },
       { h: "بنفضل معاك ونحسّن", p: "متابعة دورية وإصلاحات سريعة وتحسينات جديدة، فكل شهر الشغل يمشي أحسن من اللي قبله.",
         x: '<div class="trend"><svg viewBox="0 0 300 150" preserveAspectRatio="none"><path class="ar" d="M0 130 C 60 120, 90 110, 130 90 S 220 50, 300 20 L300 150 L0 150Z"/><path class="ln" d="M0 130 C 60 120, 90 110, 130 90 S 220 50, 300 20"/><circle cx="300" cy="20" r="6"/></svg><div class="visits"><span>الشهر 1 · <b>متابعة</b>: ردود أسرع</span><span>الشهر 2 · <b>إضافة</b>: تنبيهات المخزون</span><span>الشهر 3 · <b>تخطيط</b>: التحسين الجاي</span></div></div>' }
     ]
@@ -779,11 +882,11 @@
     if (!stack.length || reduce) return;
     stack.forEach(function (c, i) {
       var next = stack[i + 1], inner = c.firstElementChild;
-      if (!next) { inner.style.transform = ""; inner.style.filter = ""; return; }
+      if (!next) { inner.style.transform = ""; inner.style.opacity = ""; return; }
       var top = c.getBoundingClientRect().top, nTop = next.getBoundingClientRect().top, h = c.offsetHeight;
       var k = Math.min(1, Math.max(0, 1 - (nTop - top) / h));
       inner.style.transform = "perspective(1400px) translateY(" + (-k * 18).toFixed(1) + "px) scale(" + (1 - k * 0.06).toFixed(3) + ") rotateX(" + (k * 6).toFixed(2) + "deg)";
-      inner.style.filter = "brightness(" + (1 - k * 0.12).toFixed(3) + ")";
+      inner.style.opacity = (1 - k * 0.25).toFixed(3);
     });
   }
   var ticking = false;
@@ -829,7 +932,7 @@
     parts.push({ c: [0, 0.42, -0.16], r: [0.08, 0.22, 0.08], fold: 0 });
     function f(p, q) { var dx = (p[0] - q.c[0]) / q.r[0], dy = (p[1] - q.c[1]) / q.r[1], dz = (p[2] - q.c[2]) / q.r[2]; return dx * dx + dy * dy + dz * dz; }
     var tries = 0;
-    while (P.length < 2600 && tries < 60000) {
+    while (P.length < 1500 && tries < 60000) {
       tries++;
       var q = parts[(rnd() * parts.length) | 0], u = rnd() * 2 - 1, th = rnd() * 6.2832, s2 = Math.sqrt(1 - u * u);
       var p = [q.c[0] + q.r[0] * s2 * Math.cos(th), q.c[1] + q.r[1] * u, q.c[2] + q.r[2] * s2 * Math.sin(th)];
@@ -860,8 +963,15 @@
       en: { inp: ["Orders", "Invoices", "CVs", "Sales", "Stock", "Messages", "Bookings"], out: ["Answer sent", "Report ready", "Call booked", "Bill created", "Alert sent", "Shortlist ready"] },
       ar: { inp: ["طلبات", "فواتير", "سير ذاتية", "مبيعات", "مخزون", "رسائل", "حجوزات"], out: ["اترد على العميل", "التقرير جاهز", "اتحجزت مكالمة", "الفاتورة اتسجلت", "اتبعت تنبيه", "القائمة جاهزة"] }
     };
-    var W = 0, H = 0, dpr = 1, t0 = performance.now(), mx = 0, my = 0, visible = true, lastIn = 0, lastOut = 0, lastRip = 0;
-    function size() { dpr = Math.min(2, window.devicePixelRatio || 1); W = cv.clientWidth; H = cv.clientHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); }
+    var W = 0, H = 0, dpr = 1, t0 = performance.now(), mx = 0, my = 0, visible = true, lastIn = 0, lastOut = 0, lastRip = 0, lastDraw = 0;
+    var COL = {};
+    function readColors() {
+      var cs = getComputedStyle(document.documentElement);
+      COL = { dark: document.documentElement.getAttribute("data-theme") === "dark", base: cs.getPropertyValue("--forest").trim(), em: cs.getPropertyValue("--emerald").trim(), warm: cs.getPropertyValue("--warm").trim() };
+    }
+    readColors();
+    new MutationObserver(readColors).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+    function size() { dpr = Math.min(1.5, window.devicePixelRatio || 1); W = cv.clientWidth; H = cv.clientHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); }
     size(); window.addEventListener("resize", size);
     cv.parentElement.addEventListener("pointermove", function (e) { var r = cv.getBoundingClientRect(); mx = (e.clientX - r.left) / r.width - .5; my = (e.clientY - r.top) / r.height - .5; });
     cv.parentElement.addEventListener("pointerleave", function () { mx = my = 0; });
@@ -876,25 +986,26 @@
       ctx.fill(); ctx.fillStyle = col; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(text, x, y + 0.5);
     }
     function frame(now) {
-      if (!visible) { requestAnimationFrame(frame); return; }
-      var cs = getComputedStyle(document.documentElement), dark = document.documentElement.getAttribute("data-theme") === "dark", rtl = document.documentElement.dir === "rtl";
-      var base = cs.getPropertyValue("--forest").trim(), em = cs.getPropertyValue("--emerald").trim(), warm = cs.getPropertyValue("--warm").trim(), tint = cs.getPropertyValue("--tint").trim();
+      if (!visible || document.hidden || now - lastDraw < 32) { requestAnimationFrame(frame); return; }
+      lastDraw = now;
+      var dark = COL.dark, rtl = document.documentElement.dir === "rtl", base = COL.base, em = COL.em, warm = COL.warm;
       var t = (now - t0) / 1000, ry = (reduce ? 0.9 : t * 0.32) + mx * 0.9, rx = -0.3 + my * 0.35;
       var cy = Math.cos(ry), sy = Math.sin(ry), cx = Math.cos(rx), sx = Math.sin(rx), sc = Math.min(W * 0.44, H * 0.6), ox = W / 2, oy = H * 0.5;
       for (var i = 0; i < P.length; i++) {
         var p = P[i], x = p[0] * cy + p[2] * sy, z = -p[0] * sy + p[2] * cy, y = p[1] * cx - z * sx; z = p[1] * sx + z * cx;
-        var k = 2.8 / (2.8 + z); proj[i * 3] = ox + x * sc * k; proj[i * 3 + 1] = oy + y * sc * k; proj[i * 3 + 2] = z; glow[i] *= 0.93;
+        var k = 2.8 / (2.8 + z); proj[i * 3] = ox + x * sc * k; proj[i * 3 + 1] = oy + y * sc * k; proj[i * 3 + 2] = z; glow[i] *= 0.87;
       }
       for (var r = ripples.length - 1; r >= 0; r--) {
-        var R = ripples[r]; R.r += 0.018; var c0 = P[R.i];
+        var R = ripples[r]; R.r += 0.034; var c0 = P[R.i];
+        var lo = (R.r - 0.03) * (R.r - 0.03), hi = (R.r + 0.03) * (R.r + 0.03), gv = R.p * (1 - R.r / 0.9);
+        if (R.r < 0.03) lo = 0;
         for (var n = 0; n < P.length; n++) {
-          var d = Math.hypot(P[n][0] - c0[0], P[n][1] - c0[1], P[n][2] - c0[2]);
-          if (Math.abs(d - R.r) < 0.025) glow[n] = Math.max(glow[n], R.p * (1 - R.r / 0.9));
+          var dx = P[n][0] - c0[0], dy = P[n][1] - c0[1], dz = P[n][2] - c0[2], d2 = dx * dx + dy * dy + dz * dz;
+          if (d2 > lo && d2 < hi && glow[n] < gv) glow[n] = gv;
         }
         if (R.r > 0.9) ripples.splice(r, 1);
       }
       ctx.clearRect(0, 0, W, H);
-      if (dark) ctx.globalCompositeOperation = "lighter";
       ctx.lineWidth = 1; ctx.strokeStyle = em;
       for (var s = 0; s < P.length; s++) {
         if (glow[s] < 0.35 || N[s] < 0) continue;
@@ -913,7 +1024,7 @@
       if (!reduce && now - lastIn > 1200) { lastIn = now; tokens.push({ k: 0, txt: F.inp[(Math.random() * F.inp.length) | 0], x0: inX, y0: H * (0.2 + Math.random() * 0.6), n: (Math.random() * P.length) | 0, t: 0 }); }
       if (!reduce && now - lastOut > 2000) { lastOut = now; var src = (Math.random() * P.length) | 0; ripple(src, 1.1); tokens.push({ k: 1, txt: F.out[(Math.random() * F.out.length) | 0], n: src, x1: outX, y1: H * (0.22 + Math.random() * 0.56), t: 0 }); }
       for (var q2 = tokens.length - 1; q2 >= 0; q2--) {
-        var T = tokens[q2]; T.t += 0.012;
+        var T = tokens[q2]; T.t += 0.022;
         var e = 1 - Math.pow(1 - Math.min(1, T.t), 3), nx = proj[T.n * 3], ny = proj[T.n * 3 + 1], al, X, Y;
         if (!T.k) { X = T.x0 + (nx - T.x0) * e; Y = T.y0 + (ny - T.y0) * e; al = T.t < .15 ? T.t / .15 : 1 - Math.max(0, (T.t - .8) / .2); pill(T.txt, X, Y, al, warm, dark ? "rgba(234,178,106,.14)" : "#fbefdc"); if (T.t >= 1) { ripple(T.n, 1.2); tokens.splice(q2, 1); } }
         else { X = nx + (T.x1 - nx) * e; Y = ny + (T.y1 - ny) * e; al = T.t < .2 ? T.t / .2 : 1 - Math.max(0, (T.t - .75) / .25); pill(T.txt, X, Y, al, dark ? "#04251c" : "#ffffff", em); if (T.t >= 1) tokens.splice(q2, 1); }
@@ -934,6 +1045,7 @@
     var idx = 0, from = null, busy = false, lastFocus = null;
     function page(k) {
       var p = document.createElement("div"); p.className = "sysv-page";
+      if (window.jovixMountDemo && (k === "odoo" || k === "hr")) { var holder = document.createElement("div"); holder.className = "sysv-demo"; p.appendChild(holder); window.jovixMountDemo(holder, k); p.insertAdjacentHTML("beforeend", '<span class="sysv-shade"></span>'); return p; }
       p.innerHTML = '<video playsinline muted loop autoplay preload="auto" poster="media/work_' + k + '_' + lang + '.webp" src="media/work_' + k + '_' + lang + '.mp4"></video><span class="sysv-shade"></span>';
       return p;
     }
@@ -964,16 +1076,12 @@
       document.getElementById("sysv-x").focus();
     }
     function close() {
-      var done = function () { sv.hidden = true; document.body.classList.remove("sysv-open"); book.innerHTML = ""; if (lastFocus && lastFocus.focus) lastFocus.focus(); };
-      var g = fromRect();
-      if (reduce || !g || !stage.animate) { done(); return; }
-      bg.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 600, easing: "ease-in", fill: "forwards" });
-      var a = stage.animate([
-        { transformOrigin: "0 0", transform: "none", opacity: 1 },
-        { transformOrigin: "0 0", transform: "perspective(1800px) translate(" + (g.dx * 0.4) + "px," + (g.dy * 0.4) + "px) scale(" + (0.7 + g.sx * 0.2) + ") rotateX(-8deg) rotateY(6deg)", opacity: 1, offset: 0.5 },
-        { transformOrigin: "0 0", transform: "translate(" + g.dx + "px," + g.dy + "px) scale(" + g.sx + "," + g.sy + ")", opacity: 0 }
-      ], { duration: 700, easing: "cubic-bezier(.5,0,.3,1)" });
-      a.onfinish = function () { bg.getAnimations().forEach(function (x) { x.cancel(); }); done(); };
+      if (sv.hidden) return;
+      var done = function () { sv.hidden = true; document.body.classList.remove("sysv-open"); book.innerHTML = ""; stage.style.opacity = ""; bg.style.opacity = ""; if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true }); };
+      if (reduce || !stage.animate) { done(); return; }
+      stage.style.opacity = "0"; bg.style.opacity = "0";
+      stage.animate([{ opacity: 1, transform: "none" }, { opacity: 0, transform: "translateY(14px) scale(.97)" }], { duration: 380, easing: "cubic-bezier(.4,0,.2,1)" });
+      bg.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 420, easing: "ease-out" }).onfinish = done;
     }
     function go(to) {
       if (busy || to === idx) return;
@@ -1021,11 +1129,22 @@
       ["Website", "الموقع"], ["Reports", "التقارير"], ["CRM", "العملاء"]
     ];
     var S = 120, T = 92, tiles = [], visible = false, built = false;
+    var ISO_ICONS = [
+      '<svg viewBox="0 0 48 48"><path d="M8 12h5l4 18h18l4-12H15"/><circle cx="20" cy="36" r="2.6"/><circle cx="32" cy="36" r="2.6"/></svg>',
+      '<svg viewBox="0 0 48 48"><path d="M6 20L24 9l18 11v19H6z"/><path d="M13 39V26h22v13M13 32h22"/></svg>',
+      '<svg viewBox="0 0 48 48"><path d="M13 6h17l7 7v29H13z"/><path d="M19 20h12M19 27h12M19 34h7"/></svg>',
+      '<svg viewBox="0 0 48 48"><circle cx="18" cy="17" r="6"/><circle cx="32" cy="19" r="5"/><path d="M7 39c1-7 6-11 11-11s10 4 11 11M28 30c5 0 10 3 11 9"/></svg>',
+      '<svg viewBox="0 0 48 48"><path d="M24 6l4 12 12 4-12 4-4 12-4-12-12-4 12-4z"/></svg>',
+      '<svg viewBox="0 0 48 48"><path d="M10 38l2.5-7A15 15 0 1 1 18 36z"/><path d="M19 18c0 6 5 11 11 11"/></svg>',
+      '<svg viewBox="0 0 48 48"><rect x="6" y="9" width="36" height="28" rx="4"/><path d="M6 17h36M12 24h12M12 30h8"/></svg>',
+      '<svg viewBox="0 0 48 48"><path d="M8 40h32M13 34V22M21 34V14M29 34V26M37 34V18"/></svg>',
+      '<svg viewBox="0 0 48 48"><circle cx="24" cy="16" r="7"/><path d="M10 40c2-8 8-12 14-12s12 4 14 12"/></svg>'
+    ];
     PARTS.forEach(function (p, i) {
       var el = document.createElement("div"), col = i % 3, row = (i / 3) | 0;
       el.className = "iso-t" + (i === 4 ? " core" : "");
       el.style.left = (col * S) + "px"; el.style.top = (row * S) + "px";
-      el.innerHTML = '<span class="iso-l"></span>';
+      el.innerHTML = '<span class="iso-ic">' + ISO_ICONS[i] + '</span><span class="iso-l"></span>';
       plane.appendChild(el); tiles.push({ el: el, x: col * S + T / 2, y: row * S + T / 2, z: i === 4 ? 64 : 22 + ((i * 7) % 3) * 10 });
     });
     function labels() { tiles.forEach(function (t, i) { t.el.firstChild.textContent = PARTS[i][lang === "ar" ? 1 : 0]; }); }
@@ -1058,23 +1177,214 @@
     else { visible = true; build(); }
   })();
 
-  /* "We build ..." with the last word turning like a cube */
+  /* "We build ..." : the last word changes in place; its box is sized to the longest word so nothing moves */
   (function () {
-    var cubes = document.querySelectorAll(".cube"); if (!cubes.length) return;
+    var boxes = document.querySelectorAll(".cube"); if (!boxes.length) return;
     var WORDS = {
       en: ["Odoo systems", "hiring automation", "AI agents", "automations", "dashboards", "company websites"],
       ar: ["أنظمة Odoo", "أتمتة التوظيف", "وكلاء AI", "أتمتة الشغل", "لوحات متابعة", "مواقع الشركات"]
     };
     var i = 0;
-    function set(c) { var f = c.querySelectorAll("b"); f[0].textContent = WORDS[lang][i % 6]; f[1].textContent = WORDS[lang][(i + 1) % 6]; }
-    cubes.forEach(set);
-    document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", function () { cubes.forEach(set); }); });
+    function build(box) {
+      var w = WORDS[lang];
+      box.innerHTML = w.map(function (x) { return '<span class="cw-size" aria-hidden="true">' + esc(x) + '</span>'; }).join("") + '<span class="cw" aria-live="off">' + esc(w[i % w.length]) + '</span>';
+    }
+    boxes.forEach(build);
+    document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", function () { boxes.forEach(build); }); });
     if (reduce) return;
     setInterval(function () {
-      cubes.forEach(function (c) { c.classList.add("turn"); });
-      setTimeout(function () { i++; cubes.forEach(function (c) { c.classList.remove("turn"); set(c); }); }, 620);
-    }, 1900);
+      if (document.hidden) return;
+      i = (i + 1) % 6;
+      var word = WORDS[lang][i];
+      boxes.forEach(function (box) {
+        var cw = box.querySelector(".cw"); cw.classList.add("out");
+        setTimeout(function () { cw.textContent = word; cw.classList.remove("out"); cw.classList.add("in"); void cw.offsetWidth; cw.classList.remove("in"); }, 320);
+      });
+    }, 2400);
   })();
+
+  try {
+  /* live demos: small working screens; anything with data-go opens the next screen in 3D */
+  var DEMO_ICON = {
+    back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>',
+    van: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="17" r="1.8"/><circle cx="17" cy="17" r="1.8"/></svg>',
+    doc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg>',
+    cash: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/></svg>',
+    box: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8l9-5 9 5-9 5z"/><path d="M3 8v8l9 5 9-5V8"/></svg>',
+    play: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5l11 7-11 7z"/></svg>',
+    link: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>'
+  };
+  var VANS = [
+    ["VAN-01", "Mostafa Adel", "مصطفى عادل", "Nasr City", "مدينة نصر", 34, 28900, 9, 11],
+    ["VAN-02", "Karim Fathy", "كريم فتحي", "Heliopolis", "مصر الجديدة", 52, 21300, 7, 12],
+    ["VAN-03", "Omar Nabil", "عمر نبيل", "Maadi", "المعادي", 18, 31750, 7, 11],
+    ["VAN-04", "Hany Samir", "هاني سمير", "Shubra", "شبرا", 61, 17200, 5, 10],
+    ["VAN-05", "Youssef Ali", "يوسف علي", "6th of October", "6 أكتوبر", 47, 15600, 6, 13],
+    ["VAN-06", "Tamer Hassan", "تامر حسن", "New Cairo", "التجمع", 73, 11700, 4, 9]
+  ];
+  var SHOPS = [["Al Salam Market", "ماركت السلام"], ["Fresh Corner", "فريش كورنر"], ["Nile Mart", "نايل مارت"], ["Hayat Store", "محل حياة"], ["Al Amal", "الأمل"], ["City Foods", "سيتي فودز"], ["Omar Market", "ماركت عمر"], ["Green Shop", "جرين شوب"]];
+  var CANDS = [
+    ["Nour Ahmed", "نور أحمد", 92, 86, "shortlist"], ["Mahmoud Saeed", "محمود سعيد", 88, 81, "shortlist"], ["Salma Khaled", "سلمى خالد", 81, 78, "interview"],
+    ["Omar Adel", "عمر عادل", 79, 0, "interview"], ["Mona Fathy", "منى فتحي", 74, 0, "screened"], ["Karim Ali", "كريم علي", 71, 0, "screened"], ["Ali Mostafa", "علي مصطفى", 58, 0, "screened"]
+  ];
+  function L(en, ar) { return lang === "ar" ? ar : en; }
+  function money(n) { return n.toLocaleString("en-US"); }
+  var DEMOS = {
+    odoo: {
+      app: function () { return L("Van Sales", "مبيعات العربيات"); },
+      home: "home",
+      screens: {
+        home: function () {
+          return '<div class="d-kpis">' +
+            '<button class="d-kpi" data-go="vans">' + DEMO_ICON.van + '<small>' + L("Vans on route", "عربيات على الخط") + '</small><b>6</b></button>' +
+            '<button class="d-kpi" data-go="invoices">' + DEMO_ICON.doc + '<small>' + L("Invoices today", "فواتير النهارده") + '</small><b>84</b></button>' +
+            '<button class="d-kpi hint" data-go="collected">' + DEMO_ICON.cash + '<small>' + L("Collected (EGP)", "اتحصّل (جنيه)") + '</small><b>126,450</b></button>' +
+            '<button class="d-kpi" data-go="counts">' + DEMO_ICON.box + '<small>' + L("Stock counts", "جرد العربيات") + '</small><b dir="ltr">5 / 6</b></button></div>' +
+            '<div class="d-table">' + VANS.map(function (v, i) {
+              return '<button class="d-row" data-go="van" data-p="' + i + '"><b>' + v[0] + '</b><span>' + L(v[1], v[2]) + '</span><span>' + L(v[3], v[4]) + '</span><span class="d-meter"><i class="w' + Math.round(v[5] / 10) + '"></i></span><span dir="ltr">' + money(v[6]) + '</span>' +
+                '<em class="' + (v[5] < 25 ? "warn" : "") + '">' + (v[5] < 25 ? L("Reload needed", "محتاجة تحميل") : L("On route", "على الخط")) + '</em></button>';
+            }).join("") + '</div><p class="d-tip">' + L("Click any card or van to open it.", "دوس على أي كارت أو عربية تفتحها.") + '</p>';
+        },
+        collected: function () {
+          var rows = VANS.map(function (v, i) { var cash = Math.round(v[6] * (0.55 + i * 0.04)), wal = v[6] - cash; return [v, cash, wal]; });
+          return '<h4>' + L("Collections today", "تحصيل النهارده") + '</h4><div class="d-list">' + rows.map(function (r, i) {
+            return '<button class="d-li" data-go="van" data-p="' + i + '"><b>' + r[0][0] + ' · ' + L(r[0][1], r[0][2]) + '</b><span>' + L("Cash", "كاش") + ' <b dir="ltr">' + money(r[1]) + '</b></span><span>' + L("Wallet", "محفظة") + ' <b dir="ltr">' + money(r[2]) + '</b></span><em dir="ltr">' + money(r[0][6]) + '</em></button>';
+          }).join("") + '</div><div class="d-total"><span>' + L("Total collected", "إجمالي التحصيل") + '</span><b dir="ltr">126,450 EGP</b></div>' +
+          '<button class="d-btn" data-act="deposit">' + L("Send to treasury", "ورّد للخزينة") + '</button>';
+        },
+        invoices: function () {
+          return '<h4>' + L("Invoices issued today", "فواتير النهارده") + '</h4><div class="d-list">' + SHOPS.map(function (s, i) {
+            var paid = i % 3 !== 2;
+            return '<button class="d-li" data-act="invoice"><b dir="ltr">INV/2026/' + (1180 + i) + '</b><span>' + L(s[0], s[1]) + '</span><span dir="ltr">' + money(1200 + i * 735) + ' EGP</span><em class="' + (paid ? "" : "warn") + '">' + (paid ? L("Paid", "اتدفعت") : L("Due", "آجل")) + '</em></button>';
+          }).join("") + '</div>';
+        },
+        counts: function () {
+          return '<h4>' + L("End of day stock counts", "جرد آخر اليوم") + '</h4><div class="d-list">' + VANS.map(function (v, i) {
+            var done = i !== 5;
+            return '<button class="d-li" data-go="van" data-p="' + i + '"><b>' + v[0] + '</b><span>' + L(v[1], v[2]) + '</span><span>' + (done ? L("Difference: none", "الفرق: مفيش") : L("Not counted yet", "لسه متجردتش")) + '</span><em class="' + (done ? "" : "warn") + '">' + (done ? L("Done", "تم") : L("Pending", "مستني")) + '</em></button>';
+          }).join("") + '</div>';
+        },
+        vans: function () {
+          return '<h4>' + L("Vans on route now", "العربيات على الخط دلوقتي") + '</h4><div class="d-cards">' + VANS.map(function (v, i) {
+            return '<button class="d-card" data-go="van" data-p="' + i + '">' + DEMO_ICON.van + '<b>' + v[0] + '</b><span>' + L(v[3], v[4]) + '</span><span class="d-prog"><i class="w' + Math.round(v[7] / v[8] * 10) + '"></i></span><small>' + L("Shops visited", "محلات اتزارت") + ' <b dir="ltr">' + v[7] + ' / ' + v[8] + '</b></small></button>';
+          }).join("") + '</div>';
+        },
+        van: function (p) {
+          var v = VANS[+p || 0];
+          var stops = SHOPS.slice(0, 6).map(function (s, i) { return '<li class="' + (i < 4 ? "ok" : i === 4 ? "now" : "") + '"><span>' + L(s[0], s[1]) + '</span><small dir="ltr">' + (9 + i) + ':' + (i % 2 ? "30" : "05") + '</small></li>'; }).join("");
+          var stock = [["Penne 400 g", "قلم 400 جم", 42], ["Spaghetti 1 kg", "اسباجتي 1 كجم", 18], ["Elbow 400 g", "مرمرية 400 جم", 7], ["Vermicelli", "شعرية", 25]];
+          return '<div class="d-head"><div><h4>' + v[0] + ' · ' + L(v[1], v[2]) + '</h4><small>' + L("Route", "خط السير") + ': ' + L(v[3], v[4]) + '</small></div><b dir="ltr">' + money(v[6]) + ' EGP</b></div>' +
+            '<div class="d-split"><div><h5>' + L("Route stops", "محطات الخط") + '</h5><ol class="d-stops">' + stops + '</ol></div>' +
+            '<div><h5>' + L("Stock in the van", "المخزون في العربية") + '</h5><div class="d-stock">' + stock.map(function (s) { return '<div><span>' + L(s[0], s[1]) + '</span><b dir="ltr">' + s[2] + '</b><i class="w' + Math.min(10, Math.round(s[2] / 5)) + '"></i></div>'; }).join("") + '</div>' +
+            '<button class="d-btn" data-act="reload">' + L("Create reload order", "اعمل أمر تحميل") + '</button></div></div>';
+        }
+      },
+      acts: {
+        deposit: function () { return L("Treasury receipt TR/0417 created for 126,450 EGP", "اتعمل إيصال خزينة TR/0417 بمبلغ 126,450 جنيه"); },
+        invoice: function () { return L("Invoice sent to the customer on WhatsApp", "الفاتورة اتبعتت للعميل على الواتساب"); },
+        reload: function () { return L("Reload order WH/OUT/0932 sent to the warehouse", "أمر التحميل WH/OUT/0932 اتبعت للمخزن"); }
+      },
+      title: function (s, p) {
+        return { home: L("Today", "النهارده"), collected: L("Collected", "التحصيل"), invoices: L("Invoices", "الفواتير"), counts: L("Stock counts", "الجرد"), vans: L("Vans", "العربيات"), van: VANS[+p || 0][0] }[s];
+      }
+    },
+    hr: {
+      app: function () { return L("Recruitment", "التوظيف"); },
+      home: "home",
+      screens: {
+        home: function () {
+          var cols = [["screened", L("Screened", "اتفرزوا"), 46], ["interview", L("Interview", "مقابلة"), 6], ["shortlist", L("Shortlist", "القائمة المختصرة"), 4]];
+          return '<div class="d-job"><div><small>' + L("Open job", "وظيفة مفتوحة") + '</small><b>' + L("Sales Representative", "مندوب مبيعات") + '</b></div><button class="d-btn ghost" data-go="post">' + DEMO_ICON.link + L("Job post", "إعلان الوظيفة") + '</button></div>' +
+            '<div class="d-board">' + cols.map(function (c) {
+              return '<div class="d-col"><h5>' + c[1] + ' <span dir="ltr">' + c[2] + '</span></h5>' + CANDS.map(function (x, i) { return x[4] === c[0] ? '<button class="d-cand' + (i === 0 ? " hint" : "") + '" data-go="cand" data-p="' + i + '"><b>' + L(x[0], x[1]) + '</b><span class="d-score" dir="ltr">' + x[2] + '%</span></button>' : ""; }).join("") + '</div>';
+            }).join("") + '</div><p class="d-tip">' + L("Click a candidate or the job post to open it.", "دوس على أي متقدم أو على إعلان الوظيفة تفتحه.") + '</p>';
+        },
+        cand: function (p) {
+          var c = CANDS[+p || 0], sc = c[3] || c[2];
+          var bars = [[L("Experience", "الخبرة"), Math.min(98, c[2] + 4)], [L("Skills", "المهارات"), c[2] - 3], [L("Language", "اللغة"), Math.min(96, c[2] + 1)], [L("Location", "المكان"), 90]];
+          return '<div class="d-head"><div><h4>' + L(c[0], c[1]) + '</h4><small>' + L("Sales Representative", "مندوب مبيعات") + '</small></div><span class="d-ring" data-v="' + sc + '"><b dir="ltr">' + sc + '</b></span></div>' +
+            '<div class="d-split"><div><h5>' + L("Match with the job", "التطابق مع الوظيفة") + '</h5><div class="d-stock">' + bars.map(function (b) { return '<div><span>' + b[0] + '</span><b dir="ltr">' + b[1] + '%</b><i class="w' + Math.round(b[1] / 10) + '"></i></div>'; }).join("") + '</div></div>' +
+            '<div><h5>' + L("Interview summary", "ملخص المقابلة") + '</h5><ul class="d-notes"><li>' + L("Four years selling to supermarkets on fixed routes", "4 سنين بيع لسوبر ماركتات على خطوط ثابتة") + '</li><li>' + L("Clear answers on targets and returns", "إجابات واضحة عن التارجت والمرتجعات") + '</li><li>' + L("Can start in two weeks", "يقدر يبدأ خلال أسبوعين") + '</li></ul>' +
+            '<button class="d-btn" data-act="move">' + L("Move to final interview", "انقله للمقابلة النهائية") + '</button></div></div>';
+        },
+        post: function () {
+          return '<div class="d-post"><div class="d-cover"><small>' + L("We are hiring", "مطلوب") + '</small><b>' + L("Sales Representative", "مندوب مبيعات") + '</b><span>' + L("Cairo · Full time", "القاهرة · دوام كامل") + '</span></div>' +
+            '<div><h5>' + L("What you will do", "هتعمل إيه") + '</h5><ul class="d-notes"><li>' + L("Visit supermarkets on a fixed route", "تزور سوبر ماركتات على خط ثابت") + '</li><li>' + L("Take orders and collect payments", "تاخد الطلبات وتحصّل الفلوس") + '</li><li>' + L("Report daily on the app", "تعمل تقرير يومي على الأبلكيشن") + '</li></ul>' +
+            '<button class="d-btn" data-act="copy">' + DEMO_ICON.link + L("Copy the apply link", "انسخ لينك التقديم") + '</button></div></div>';
+        }
+      },
+      acts: {
+        move: function () { return L("Final interview booked for Sunday at 11:00", "المقابلة النهائية اتحجزت الأحد الساعة 11"); },
+        copy: function () { return L("Apply link copied. Candidates apply without an account", "لينك التقديم اتنسخ. المتقدم بيقدّم من غير حساب"); }
+      },
+      title: function (s, p) { return { home: L("Sales Representative", "مندوب مبيعات"), cand: L(CANDS[+p || 0][0], CANDS[+p || 0][1]), post: L("Job post", "إعلان الوظيفة") }[s]; }
+    }
+  };
+  function mountDemo(root, kind) {
+    var D = DEMOS[kind]; if (!root || !D) return null;
+    root.classList.add("demo"); root.innerHTML =
+      '<div class="d-bar"><span class="d-dots"><i></i><i></i><i></i></span><button class="d-back" type="button" aria-label="Back" hidden>' + DEMO_ICON.back + '</button><b class="d-app"></b><span class="d-crumb"></span><span class="d-live">' + L("Live demo", "ديمو حي") + '</span></div>' +
+      '<div class="d-view"></div><div class="d-toast" role="status"></div>';
+    var view = root.querySelector(".d-view"), back = root.querySelector(".d-back"), app = root.querySelector(".d-app"), crumb = root.querySelector(".d-crumb"), toast = root.querySelector(".d-toast");
+    var stack = [[D.home, null]], busy = false, toastT = null;
+    function screen(s, p) {
+      var el = document.createElement("div"); el.className = "d-screen";
+      el.innerHTML = D.screens[s](p);
+      el.querySelectorAll(".d-ring").forEach(function (r) { r.style.setProperty("--v", r.dataset.v); });
+      return el;
+    }
+    function labels() {
+      var top = stack[stack.length - 1];
+      app.textContent = D.app(); crumb.textContent = stack.length > 1 ? D.title(top[0], top[1]) : D.title(D.home);
+      back.hidden = stack.length < 2;
+      root.querySelector(".d-live").textContent = L("Live demo", "ديمو حي");
+    }
+    function show(dir, origin) {
+      var top = stack[stack.length - 1], old = view.querySelector(".d-screen"), nw = screen(top[0], top[1]);
+      view.appendChild(nw); labels();
+      if (!old) return;
+      if (reduce || !nw.animate) { old.remove(); return; }
+      busy = true;
+      var o = origin ? (origin.x + "px " + origin.y + "px") : "50% 50%";
+      nw.style.transformOrigin = o; old.style.transformOrigin = o;
+      if (dir > 0) {
+        nw.animate([{ opacity: 0, transform: "perspective(1200px) translateZ(-180px) scale(.72) rotateX(8deg)" }, { opacity: 1, transform: "none" }], { duration: 520, easing: "cubic-bezier(.2,.8,.2,1)" });
+        old.animate([{ opacity: 1, transform: "none" }, { opacity: 0, transform: "perspective(1200px) translateZ(120px) scale(1.12)" }], { duration: 420, easing: "ease-in", fill: "forwards" }).onfinish = function () { old.remove(); busy = false; };
+      } else {
+        nw.animate([{ opacity: 0, transform: "perspective(1200px) translateZ(120px) scale(1.1)" }, { opacity: 1, transform: "none" }], { duration: 480, easing: "cubic-bezier(.2,.8,.2,1)" });
+        old.animate([{ opacity: 1, transform: "none" }, { opacity: 0, transform: "perspective(1200px) translateZ(-160px) scale(.75) rotateX(-6deg)" }], { duration: 400, easing: "ease-in", fill: "forwards" }).onfinish = function () { old.remove(); busy = false; };
+      }
+    }
+    function ripple(el, e) {
+      var r = el.getBoundingClientRect(), s = document.createElement("span"); s.className = "d-ripple";
+      s.style.left = (e.clientX - r.left) + "px"; s.style.top = (e.clientY - r.top) + "px"; el.appendChild(s);
+      setTimeout(function () { s.remove(); }, 600);
+    }
+    root.addEventListener("click", function (e) {
+      if (e.target.closest(".d-back")) { if (busy || stack.length < 2) return; stack.pop(); show(-1); return; }
+      var go = e.target.closest("[data-go]"), act = e.target.closest("[data-act]");
+      if (!go && !act) return;
+      e.stopPropagation(); ripple(go || act, e);
+      if (go && !busy) {
+        var vr = view.getBoundingClientRect(), gr = go.getBoundingClientRect();
+        stack.push([go.dataset.go, go.dataset.p]);
+        setTimeout(function () { show(1, { x: gr.left + gr.width / 2 - vr.left, y: gr.top + gr.height / 2 - vr.top }); }, 140);
+      } else if (act) {
+        var msg = D.acts[act.dataset.act](view);
+        toast.textContent = msg; toast.classList.remove("on"); void toast.offsetWidth; toast.classList.add("on");
+        clearTimeout(toastT); toastT = setTimeout(function () { toast.classList.remove("on"); }, 3200);
+      }
+    });
+    function rerender() { var old = view.querySelector(".d-screen"); if (old) old.remove(); show(0); }
+    show(0);
+    return { rerender: rerender };
+  }
+  var demos = [];
+  document.querySelectorAll("[data-demo]").forEach(function (el) { var d = mountDemo(el, el.dataset.demo); if (d) demos.push(d); });
+  document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", function () { demos.forEach(function (d) { d.rerender(); }); }); });
+  window.jovixMountDemo = mountDemo;
+
+  } catch (err) { if (window.console) console.error(err); }
 
   setLang(lang);
 })();
