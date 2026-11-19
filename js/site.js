@@ -83,6 +83,18 @@
     rc_cta: "احجز عرض تجريبي", rc_cta2: "سجّل في القائمة الأولى",
     priv: "الخصوصية",
     nav7: "وكلاء AI", skip: "روح للمحتوى",
+    more_link: "شوف الشغل", rc_more: "شوف بيشتغل إزاي", wk_p2: "أكتر من 25 مشروع في Odoo والموارد البشرية والأتمتة والوكلاء والـ AI والمواقع. ودول تلاتة منهم.", wk_all: "شوف كل شغلنا",
+    w_t1: "مبيعات العربيات لمصنع مكرونة", w_m1: "Odoo", w_t2: "التوظيف من الإعلان للقائمة المختصرة", w_m2: "الموارد البشرية والتوظيف", w_t3: "وكيل واتساب لموزّع أغذية", w_m3: "وكيل AI",
+    br_tag: "بياناتك بتدخل، والقرارات بتطلع",
+    hp_h: 'توظيف <span class="warm">بيمشي لوحده</span>', hw_h: "من الإعلان للقائمة المختصرة، في أربع خطوات", hw_p: "الـ HR بيظبط الوظيفة مرة واحدة، وكل اللي بعد كده بيمشي لوحده لحد المقابلة النهائية.",
+    who_h: "معمول على طريقة التوظيف في مصر", who1b: "وظايف المكاتب والحرف", who1p: "محاسبين ومندوبين، وسواقين وجزارين وفنيين. الـ CV العربي القصير بيتقري بنفس الاهتمام زي الإنجليزي الطويل.",
+    who2b: "عربي وإنجليزي، بالصوت", who2p: "المقابلات الأولى بالعربي المصري أو الإنجليزي، في الوقت اللي يناسب المتقدم.",
+    who3b: "الكلمة الأخيرة للـ HR", who3p: "كل تقييم معاه أسبابه، وكل قرار نهائي بياخده شخص من فريقك.",
+    hq_h: "أسئلة فرق الـ HR بتسألها", hq1: "لازم يكون عندنا Odoo؟", ha1: "شغال جوه Odoo دلوقتي، ونسخة سحابية للشركات اللي معندهاش Odoo جاية قريب.",
+    hq2: "بيقرا السير الذاتية العربي؟", ha2: "أيوه، عربي وإنجليزي، ومعاهم الـ CV القصير لوظايف الحرف والعمالة.",
+    hq3: "المتقدم محتاج يسطّب حاجة؟", ha3: "لأ. بيقدّم من لينك، وبيعمل المقابلة من متصفح الموبايل أو اللاب.",
+    hq4: "الـ HR يقدر يغيّر القرار؟", ha4: "دايمًا. السيستم بيرتّب ويشرح، والـ HR بيوافق أو يرفض أو ينقل أي متقدم.",
+    cta_h: 'قولنا <span class="warm">المشكلة.</span> وهنوريك الحل.', cta_form: "ابعتلنا التفاصيل",
     h_1: 'احكيلنا <span class="warm">المشكلة.</span>',
     ft_tag: 'احكيلنا <span class="warm">المشكلة.</span> والحل علينا.', ft_h1: "الخدمات", ft_h2: "الشركة", ft_h3: "تواصل",
     ft_l1: "Odoo وأنظمة الأعمال", ft_l2: "أتمتة التوظيف", ft_l3: "الأتمتة", ft_l4: "وكلاء AI", ft_l5: "AI لفريقك", ft_l6: "مواقع الشركات", ft_l7: "طريقة شغلنا", ft_l8: "الأسئلة", ft_base: "عربي وإنجليزي · مصر", ag_label: "وكلاء الذكاء الاصطناعي", ag_h: "أكتر أربع وكلاء الشركات بتطلبهم مننا",
@@ -313,15 +325,20 @@
     renderRoles(); renderWork(false); compose();
     if (typeof agRender === "function") { agRender(); agPlay(); }
     if (typeof jrShow === "function") jrShow(jrI);
+    if (document.getElementById("rec-img")) {
     document.getElementById("rec-img").src = "media/work_hr_" + lang + ".webp";
     document.getElementById("rec-demo").href = "https://wa.me/201283450444?text=" + encodeURIComponent(lang === "ar" ? "أهلًا Jovix، عايز أحجز عرض تجريبي لأتمتة التوظيف." : "Hello Jovix, I'd like to book a demo of your recruitment automation.");
     document.getElementById("rec-early").href = "https://wa.me/201283450444?text=" + encodeURIComponent(lang === "ar" ? "أهلًا Jovix، عايز أسجّل في القائمة الأولى للنسخة السحابية من أتمتة التوظيف." : "Hello Jovix, please add me to the early list for the cloud version of your recruitment automation.");
+    }
+    document.querySelectorAll("[data-src-lang]").forEach(function (im) { im.src = im.dataset.srcLang + lang + ".webp"; });
+    if (typeof stmtBuild === "function") stmtBuild();
     try { localStorage.setItem("jovix-lang", lang); } catch (e) {}
   }
   document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", function () { setLang(b.dataset.lang); }); });
 
   /* morph: a problem scattered, then put in order. One engine, used by the hero, the team picker and the trust column. */
   function makeMorph(root, o) {
+    if (!root) return { play: function () {}, current: function () { return 0; } };
     var head = document.createElement("div"), state = document.createElement("span"), title = document.createElement("b"), body = document.createElement("div"), sweep = document.createElement("span"), foot = null;
     head.className = "mo-head"; state.className = "mo-state"; title.className = "mo-title"; body.className = "mo-body"; sweep.className = "mo-sweep";
     head.appendChild(state); head.appendChild(title); body.appendChild(sweep); root.appendChild(head); root.appendChild(body);
@@ -459,6 +476,7 @@
   /* roles */
   var roleList = document.getElementById("role-list"), rolePanel = document.getElementById("role-panel");
   function renderRoles() {
+    if (!roleList) return;
     var data = ROLES[lang];
     roleList.innerHTML = data.map(function (r, i) {
       return '<button type="button" role="tab" id="role-' + i + '" aria-controls="role-panel" aria-selected="' + (i === role) + '" data-i="' + i + '">' + esc(r.k) + '</button>';
@@ -466,6 +484,7 @@
     paintRole(false);
   }
   function paintRole(animate) {
+    if (!document.getElementById("role-text")) return;
     var r = ROLES[lang][role], ui = ROLE_UI[lang];
     rolePanel.setAttribute("aria-labelledby", "role-" + role);
     document.getElementById("role-text").innerHTML = '<h3>' + esc(r.t) + '</h3><div class="role-items">' + r.items.map(function (it, i) {
@@ -475,7 +494,7 @@
     var rt = document.getElementById("role-text"); if (animate) { rt.classList.remove("fade-swap"); void rt.offsetWidth; rt.classList.add("fade-swap"); }
     if (typeof roleMorph !== "undefined" && roleMorph) roleMorph.play(role);
   }
-  roleList.addEventListener("click", function (e) {
+  if (roleList) roleList.addEventListener("click", function (e) {
     var b = e.target.closest("button"); if (!b) return;
     role = +b.dataset.i;
     roleList.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-selected", String(x === b)); });
@@ -486,6 +505,7 @@
   var tabsEl = document.getElementById("work-tabs"), panel = document.getElementById("work-panel");
   var KEYS = ["odoo", "hr", "automation", "agents", "ai", "web"];
   function renderWork(animate) {
+    if (!tabsEl) return;
     var W = WORK[lang];
     tabsEl.innerHTML = KEYS.map(function (k) {
       return '<button type="button" role="tab" id="tab-' + k + '" aria-controls="work-panel" aria-selected="' + (k === tab) + '" data-k="' + k + '">' + esc(W.tabs[k]) + '</button>';
@@ -507,12 +527,13 @@
       }).join("") + '</div>';
     if (animate) { panel.classList.remove("fade-swap"); void panel.offsetWidth; panel.classList.add("fade-swap"); }
   }
-  tabsEl.addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; tab = b.dataset.k; renderWork(true); });
-  document.querySelectorAll(".svc[data-tab]").forEach(function (a) { a.addEventListener("click", function () { tab = a.dataset.tab; renderWork(true); }); });
+  if (tabsEl) tabsEl.addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; tab = b.dataset.k; renderWork(true); });
+  if (tabsEl && KEYS.indexOf(location.hash.slice(1)) >= 0) tab = location.hash.slice(1);
+  window.addEventListener("hashchange", function () { if (tabsEl && KEYS.indexOf(location.hash.slice(1)) >= 0) { tab = location.hash.slice(1); renderWork(true); } });
 
   /* video dialog */
   var dlg = document.getElementById("player"), pv = document.getElementById("player-video"), pc = document.getElementById("player-cap");
-  panel.addEventListener("click", function (e) {
+  if (panel) panel.addEventListener("click", function (e) {
     var s = e.target.closest(".shot"); if (!s) return;
     var k = s.dataset.video;
     pv.src = "media/work_" + k + "_" + lang + ".mp4"; pv.poster = "media/work_" + k + "_" + lang + ".webp";
@@ -520,7 +541,8 @@
     if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
     pv.play().catch(function () {});
   });
-  document.getElementById("rec-shot").addEventListener("click", function () {
+  var recShot = document.getElementById("rec-shot");
+  if (recShot) recShot.addEventListener("click", function () {
     pv.src = "media/work_hr_" + lang + ".mp4"; pv.poster = "media/work_hr_" + lang + ".webp";
     pc.textContent = (lang === "ar" ? "أتمتة التوظيف" : "Recruitment automation") + " · " + tr("demo");
     if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
@@ -548,14 +570,14 @@
   });
   var form = document.getElementById("brief"), send = document.getElementById("send");
   function compose() {
+    if (!form) return;
     var f = form.elements, need = f.need.options[f.need.selectedIndex].textContent, name = f.name.value.trim(), co = f.company.value.trim(), msg = f.message.value.trim();
     var text = lang === "ar"
       ? "أهلًا Jovix، أنا " + (name || "...") + (co ? " من " + co : "") + ".\nمحتاج: " + need + (msg ? "\n\n" + msg : "")
       : "Hello Jovix, I'm " + (name || "...") + (co ? " from " + co : "") + ".\nI need: " + need + (msg ? "\n\n" + msg : "");
     send.href = "https://wa.me/201283450444?text=" + encodeURIComponent(text);
   }
-  form.addEventListener("input", compose);
-  form.addEventListener("submit", function (e) { e.preventDefault(); });
+  if (form) { form.addEventListener("input", compose); form.addEventListener("submit", function (e) { e.preventDefault(); }); }
 
   /* theme */
   document.getElementById("theme").addEventListener("click", function () {
@@ -585,6 +607,7 @@
     while (feed.children.length > 5) feed.lastChild.remove();
   }
   function fillFeed() { feed.innerHTML = ""; evi = 0; for (var m = 4; m >= 0; m--) pushEvent(m * 3); }
+  if (fsvg) {
   fillFeed();
   if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { flowVisible = es[0].isIntersecting; }).observe(fsvg);
   if (!reduce) {
@@ -593,11 +616,12 @@
     setInterval(function () { if (flowVisible && !document.hidden) pushEvent(0); }, 2600);
   }
   document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", fillFeed); });
+  }
 
   /* flip cards */
   function flip(card) { var on = !card.classList.contains("on"); card.classList.toggle("on", on); card.setAttribute("aria-pressed", String(on)); }
-  panel.addEventListener("click", function (e) { if (e.target.closest("a")) return; var c = e.target.closest(".flip"); if (c) flip(c); });
-  panel.addEventListener("keydown", function (e) { var c = e.target.closest && e.target.closest(".flip"); if (c && e.target === c && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); flip(c); } });
+  if (panel) panel.addEventListener("click", function (e) { if (e.target.closest("a")) return; var c = e.target.closest(".flip"); if (c) flip(c); });
+  if (panel) panel.addEventListener("keydown", function (e) { var c = e.target.closest && e.target.closest(".flip"); if (c && e.target === c && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); flip(c); } });
 
   /* 3D tilt on screens */
   var fine = window.matchMedia("(pointer: fine)").matches;
@@ -610,8 +634,8 @@
   }
   if (fine && !reduce) {
     document.querySelectorAll(".tilt").forEach(tilt);
-    new MutationObserver(function () { panel.querySelectorAll(".shot:not([data-tilt])").forEach(function (s) { s.dataset.tilt = "1"; s.classList.add("tilt"); tilt(s); }); }).observe(panel, { childList: true });
-    panel.querySelectorAll(".shot").forEach(function (s) { s.dataset.tilt = "1"; s.classList.add("tilt"); tilt(s); });
+    if (panel) new MutationObserver(function () { panel.querySelectorAll(".shot:not([data-tilt])").forEach(function (s) { s.dataset.tilt = "1"; s.classList.add("tilt"); tilt(s); }); }).observe(panel, { childList: true });
+    if (panel) panel.querySelectorAll(".shot").forEach(function (s) { s.dataset.tilt = "1"; s.classList.add("tilt"); tilt(s); });
   }
 
 
@@ -645,6 +669,7 @@
   var jrSteps = document.querySelectorAll("#jr-steps button"), jrStage = document.getElementById("jr-stage"), jrI = 0, jrTimer = null, jrVisible = false;
   jrSteps.forEach(function (b) { if (!b.querySelector(".bar")) { var s = document.createElement("span"); s.className = "bar"; b.appendChild(s); } });
   function jrShow(i) {
+    if (!jrStage) return;
     jrI = i; clearTimeout(jrTimer);
     jrSteps.forEach(function (b, k) { b.classList.toggle("on", k === i); b.classList.toggle("done", k < i); var bar = b.querySelector(".bar"); bar.style.animation = "none"; void bar.offsetWidth; bar.style.animation = ""; });
     var d = JR[lang][i];
@@ -654,7 +679,7 @@
     if (!reduce) jrTimer = setTimeout(function () { if (jrVisible) jrShow((jrI + 1) % 5); else jrTimer = null; }, 5200);
   }
   jrSteps.forEach(function (b) { b.addEventListener("click", function () { jrShow(+b.dataset.i); }); });
-  if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { jrVisible = es[0].isIntersecting; if (jrVisible && !jrTimer) jrShow(jrI); }, { threshold: .35 }).observe(jrStage);
+  if (jrStage && "IntersectionObserver" in window) new IntersectionObserver(function (es) { jrVisible = es[0].isIntersecting; if (jrVisible && !jrTimer) jrShow(jrI); }, { threshold: .35 }).observe(jrStage);
 
   /* agents: four common agents with a live example run */
   var AG = {
@@ -691,6 +716,7 @@
   var agTabs = document.getElementById("ag-tabs"), agInfo = document.getElementById("ag-info"), agFeed = document.getElementById("ag-feed"), agTitle = document.getElementById("ag-title");
   var agI = 0, agRun = 0, agVisible = false, agStarted = false;
   function agRender() {
+    if (!agTabs) return;
     agTabs.innerHTML = AG[lang].map(function (a, i) { return '<button type="button" role="tab" aria-selected="' + (i === agI) + '" data-i="' + i + '"><i>0' + (i + 1) + '</i><b>' + esc(a.k) + '</b><span class="bar"></span></button>'; }).join("");
     var a = AG[lang][agI];
     agInfo.innerHTML = '<h3>' + esc(a.t) + '</h3><p>' + esc(a.p) + '</p><ul>' + a.li.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join("") + '</ul><p class="conn">' + esc(a.c) + '</p>' +
@@ -698,6 +724,7 @@
     agTitle.textContent = a.w;
   }
   function agPlay() {
+    if (!agFeed) return;
     var run = ++agRun, a = AG[lang][agI], tm = 200, total = 0;
     agFeed.innerHTML = "";
     var at = function (ms, fn) { setTimeout(function () { if (run === agRun) fn(); }, ms); };
@@ -718,8 +745,183 @@
     var bar = agTabs.querySelector('[aria-selected="true"] .bar'); if (bar) bar.style.animationDuration = (total / 1000) + "s";
     at(total, function () { if (agVisible && !reduce) { agI = (agI + 1) % 4; agRender(); agPlay(); } else agStarted = false; });
   }
-  agTabs.addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; agI = +b.dataset.i; agRender(); agPlay(); agStarted = true; });
-  if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { agVisible = es[0].isIntersecting; if (agVisible && !agStarted) { agStarted = true; agPlay(); } }, { threshold: .3 }).observe(agFeed);
+  if (agTabs) agTabs.addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; agI = +b.dataset.i; agRender(); agPlay(); agStarted = true; });
+  if (agFeed && "IntersectionObserver" in window) new IntersectionObserver(function (es) { agVisible = es[0].isIntersecting; if (agVisible && !agStarted) { agStarted = true; agPlay(); } }, { threshold: .3 }).observe(agFeed);
+
+  /* statement: words light up as the reader scrolls through it */
+  var STMT = {
+    en: "Every company has work that *repeats,* *waits* or gets *lost* between people. We find it, _build_ _the_ _fix,_ and stay until it _runs_ _on_ _its_ _own._",
+    ar: "كل شركة فيها شغل *بيتكرر،* أو *بيستنى،* أو *بيضيع* بين الناس. إحنا بنلاقيه، _ونبني_ _الحل،_ ونفضل معاك لحد ما _يمشي_ _لوحده._"
+  };
+  var stmtEl = document.getElementById("stmt"), stmtWords = [];
+  function stmtBuild() {
+    if (!stmtEl) return;
+    stmtEl.innerHTML = STMT[lang].split(" ").map(function (w) {
+      var cls = "w";
+      if (/^\*.*\*$/.test(w)) { cls += " warm-w"; w = w.slice(1, -1); } else if (/^_.*_$/.test(w)) { cls += " green-w"; w = w.slice(1, -1); }
+      return '<span class="' + cls + '">' + esc(w) + '</span>';
+    }).join(" ");
+    stmtWords = stmtEl.querySelectorAll(".w"); stmtTick();
+  }
+  function stmtTick() {
+    if (!stmtEl || !stmtWords.length) return;
+    var r = stmtEl.getBoundingClientRect(), vh = window.innerHeight;
+    var p = reduce ? 1 : Math.min(1, Math.max(0, (vh * 0.85 - r.top) / (r.height + vh * 0.35)));
+    var lit = Math.round(p * stmtWords.length);
+    stmtWords.forEach(function (w, i) { w.classList.toggle("on", i < lit); });
+  }
+
+  /* services: cards stack in 3D as the next one slides over */
+  var stack = document.querySelectorAll(".stack-card");
+  function stackTick() {
+    if (!stack.length || reduce) return;
+    stack.forEach(function (c, i) {
+      var next = stack[i + 1], inner = c.firstElementChild;
+      if (!next) { inner.style.transform = ""; inner.style.filter = ""; return; }
+      var top = c.getBoundingClientRect().top, nTop = next.getBoundingClientRect().top, h = c.offsetHeight;
+      var k = Math.min(1, Math.max(0, 1 - (nTop - top) / h));
+      inner.style.transform = "perspective(1400px) translateY(" + (-k * 18).toFixed(1) + "px) scale(" + (1 - k * 0.06).toFixed(3) + ") rotateX(" + (k * 6).toFixed(2) + "deg)";
+      inner.style.filter = "brightness(" + (1 - k * 0.12).toFixed(3) + ")";
+    });
+  }
+  var ticking = false;
+  window.addEventListener("scroll", function () { if (ticking) return; ticking = true; requestAnimationFrame(function () { ticking = false; stmtTick(); stackTick(); }); }, { passive: true });
+  window.addEventListener("resize", function () { stmtTick(); stackTick(); });
+
+  /* hiring page: its own problem-to-solution scenes */
+  var MO_HIRE = {
+    en: { prob: "The problem", done: "With Jovix", scenes: [
+      { k: "Screening", p: "Hundreds of CVs for one opening", s: "Every CV scored against the job", hi: "Shortlist", hn: 4,
+        a: ["CV · 3 pages", "CV · wrong field", "CV · no phone", "CV · Arabic", "CV · duplicate", "CV · unread", "CV · unread", "CV · photo only", "CV · unread", "CV · English", "CV · old", "CV · unread"],
+        b: ["Nour Ahmed · 92%", "Mahmoud Saeed · 88%", "Salma Khaled · 81%", "Omar Adel · 79%", "Mona Fathy · 74%", "Karim Ali · 71%", "Yara Samir · 66%", "Hany Nabil · 61%", "Ali Mostafa · 58%", "Rana Hassan · 52%", "Tamer Saad · 44%", "Hossam Adel · 38%"] },
+      { k: "Interviews", p: "Days of calls to book first interviews", s: "Interviews booked and done on their own", hi: "Done", hn: 6,
+        a: ["no answer", "call later", "busy now", "wrong number", "send details?", "Thursday?", "no answer", "reschedule", "voicemail", "where is it?", "no answer", "missed"],
+        b: ["Nour · 86 / 100", "Mahmoud · 81 / 100", "Salma · 78 / 100", "Omar · 74 / 100", "Mona · 71 / 100", "Karim · 69 / 100", "Yara · invited", "Hany · invited", "Ali · reminder sent", "Rana · reminder sent", "Tamer · not a fit", "Hossam · not a fit"] }
+    ] },
+    ar: { prob: "المشكلة", done: "مع Jovix", scenes: [
+      { k: "الفرز", p: "مئات السير الذاتية لوظيفة واحدة", s: "كل CV اتقيّم على الوظيفة", hi: "مختصرة", hn: 4,
+        a: ["CV · 3 صفحات", "CV · مجال تاني", "CV · من غير رقم", "CV · عربي", "CV · مكرر", "CV · متقراش", "CV · متقراش", "CV · صورة بس", "CV · متقراش", "CV · إنجليزي", "CV · قديم", "CV · متقراش"],
+        b: ["نور أحمد · 92%", "محمود سعيد · 88%", "سلمى خالد · 81%", "عمر عادل · 79%", "منى فتحي · 74%", "كريم علي · 71%", "يارا سمير · 66%", "هاني نبيل · 61%", "علي مصطفى · 58%", "رنا حسن · 52%", "تامر سعد · 44%", "حسام عادل · 38%"] },
+      { k: "المقابلات", p: "أيام مكالمات عشان تحجز المقابلات الأولى", s: "المقابلات بتتحجز وبتتعمل لوحدها", hi: "خلصت", hn: 6,
+        a: ["مبيردش", "كلمني بعدين", "مشغول", "رقم غلط", "ابعت التفاصيل؟", "الخميس؟", "مبيردش", "غيّر الميعاد", "بريد صوتي", "فين اللينك؟", "مبيردش", "فاتت"],
+        b: ["نور · 86 / 100", "محمود · 81 / 100", "سلمى · 78 / 100", "عمر · 74 / 100", "منى · 71 / 100", "كريم · 69 / 100", "يارا · اتبعتلها دعوة", "هاني · اتبعتله دعوة", "علي · اتبعت تذكير", "رنا · اتبعت تذكير", "تامر · مش مناسب", "حسام · مش مناسب"] }
+    ] }
+  };
+  var hireMorph = makeMorph(document.getElementById("hire-morph"), { n: 12, tabs: true, data: function () { return MO_HIRE[lang]; } });
+  var moBuildBase = moBuild;
+  moBuild = function () { moBuildBase(); hireMorph.play(hireMorph.current()); };
+
+  /* the brain: a 3D cortex of points that turns slowly; data arrives, activity ripples across it, results leave */
+  (function () {
+    var cv = document.getElementById("brain"); if (!cv || !cv.getContext) return;
+    var ctx = cv.getContext("2d"), seed = 5;
+    var rnd = function () { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
+    var parts = [], P = [], N = [], ripples = [], tokens = [];
+    [-1, 1].forEach(function (h) {
+      parts.push({ c: [h * 0.3, -0.05, 0.0], r: [0.3, 0.4, 0.62], fold: 1 });
+      parts.push({ c: [h * 0.28, 0.0, 0.33], r: [0.27, 0.33, 0.36], fold: 1 });
+      parts.push({ c: [h * 0.27, -0.03, -0.36], r: [0.26, 0.33, 0.33], fold: 1 });
+      parts.push({ c: [h * 0.33, 0.2, 0.1], r: [0.23, 0.18, 0.38], fold: 1 });
+      parts.push({ c: [h * 0.17, 0.34, -0.41], r: [0.2, 0.13, 0.2], fold: 2 });
+    });
+    parts.push({ c: [0, 0.42, -0.16], r: [0.08, 0.22, 0.08], fold: 0 });
+    function f(p, q) { var dx = (p[0] - q.c[0]) / q.r[0], dy = (p[1] - q.c[1]) / q.r[1], dz = (p[2] - q.c[2]) / q.r[2]; return dx * dx + dy * dy + dz * dz; }
+    var tries = 0;
+    while (P.length < 2600 && tries < 60000) {
+      tries++;
+      var q = parts[(rnd() * parts.length) | 0], u = rnd() * 2 - 1, th = rnd() * 6.2832, s2 = Math.sqrt(1 - u * u);
+      var p = [q.c[0] + q.r[0] * s2 * Math.cos(th), q.c[1] + q.r[1] * u, q.c[2] + q.r[2] * s2 * Math.sin(th)];
+      if (q.fold === 1 && Math.abs(p[0]) < 0.035) continue;
+      var hidden = false;
+      for (var k = 0; k < parts.length; k++) if (parts[k] !== q && f(p, parts[k]) < 0.94) { hidden = true; break; }
+      if (hidden) continue;
+      if (q.fold === 1) {
+        var g = Math.sin(14 * p[2] + 4 * Math.sin(9 * p[1])) * Math.sin(12 * p[1] + 3 * Math.sin(8 * p[2]) + 2 * p[0]);
+        if (rnd() > 0.25 + 0.75 * Math.abs(g)) continue;
+      } else if (q.fold === 2) {
+        if (rnd() > 0.12 + 0.3 * Math.abs(Math.sin(40 * p[1]))) continue;
+      } else if (rnd() > 0.25) continue;
+      P.push(p);
+    }
+    // nearest neighbour per point, for the short synapse lines of active points
+    var cell = 0.07, grid = {};
+    P.forEach(function (p, i) { var key = Math.floor(p[0] / cell) + "," + Math.floor(p[1] / cell) + "," + Math.floor(p[2] / cell); (grid[key] = grid[key] || []).push(i); });
+    P.forEach(function (p, i) {
+      var best = -1, bd = 1e9, gx = Math.floor(p[0] / cell), gy = Math.floor(p[1] / cell), gz = Math.floor(p[2] / cell);
+      for (var a = -1; a <= 1; a++) for (var b = -1; b <= 1; b++) for (var c = -1; c <= 1; c++) {
+        (grid[(gx + a) + "," + (gy + b) + "," + (gz + c)] || []).forEach(function (j) { if (j === i) return; var d = (P[j][0] - p[0]) * (P[j][0] - p[0]) + (P[j][1] - p[1]) * (P[j][1] - p[1]) + (P[j][2] - p[2]) * (P[j][2] - p[2]); if (d < bd) { bd = d; best = j; } });
+      }
+      N.push(best);
+    });
+    var glow = new Float32Array(P.length), proj = new Float32Array(P.length * 3);
+    var FLOW = {
+      en: { inp: ["Orders", "Invoices", "CVs", "Sales", "Stock", "Messages", "Bookings"], out: ["Answer sent", "Report ready", "Call booked", "Bill created", "Alert sent", "Shortlist ready"] },
+      ar: { inp: ["طلبات", "فواتير", "سير ذاتية", "مبيعات", "مخزون", "رسائل", "حجوزات"], out: ["اترد على العميل", "التقرير جاهز", "اتحجزت مكالمة", "الفاتورة اتسجلت", "اتبعت تنبيه", "القائمة جاهزة"] }
+    };
+    var W = 0, H = 0, dpr = 1, t0 = performance.now(), mx = 0, my = 0, visible = true, lastIn = 0, lastOut = 0, lastRip = 0;
+    function size() { dpr = Math.min(2, window.devicePixelRatio || 1); W = cv.clientWidth; H = cv.clientHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); }
+    size(); window.addEventListener("resize", size);
+    cv.parentElement.addEventListener("pointermove", function (e) { var r = cv.getBoundingClientRect(); mx = (e.clientX - r.left) / r.width - .5; my = (e.clientY - r.top) / r.height - .5; });
+    cv.parentElement.addEventListener("pointerleave", function () { mx = my = 0; });
+    cv.parentElement.addEventListener("click", function () { ripple((Math.random() * P.length) | 0, 1.4); });
+    function ripple(i, power) { ripples.push({ i: i, r: 0, p: power || 1 }); }
+    window.jovixBrainBurst = function () { ripple((Math.random() * P.length) | 0, 1.4); };
+    function pill(text, x, y, alpha, col, bg) {
+      ctx.font = "600 13px " + (lang === "ar" ? '"IBM Plex Sans Arabic"' : '"Instrument Sans"') + ", sans-serif";
+      var w = ctx.measureText(text).width + 24, h = 28;
+      ctx.globalAlpha = alpha; ctx.fillStyle = bg; ctx.beginPath();
+      if (ctx.roundRect) ctx.roundRect(x - w / 2, y - h / 2, w, h, 14); else ctx.rect(x - w / 2, y - h / 2, w, h);
+      ctx.fill(); ctx.fillStyle = col; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(text, x, y + 0.5);
+    }
+    function frame(now) {
+      if (!visible) { requestAnimationFrame(frame); return; }
+      var cs = getComputedStyle(document.documentElement), dark = document.documentElement.getAttribute("data-theme") === "dark", rtl = document.documentElement.dir === "rtl";
+      var base = cs.getPropertyValue("--forest").trim(), em = cs.getPropertyValue("--emerald").trim(), warm = cs.getPropertyValue("--warm").trim(), tint = cs.getPropertyValue("--tint").trim();
+      var t = (now - t0) / 1000, ry = (reduce ? 0.9 : t * 0.22) + mx * 0.9, rx = -0.3 + my * 0.35;
+      var cy = Math.cos(ry), sy = Math.sin(ry), cx = Math.cos(rx), sx = Math.sin(rx), sc = Math.min(W * 0.44, H * 0.6), ox = W / 2, oy = H * 0.5;
+      for (var i = 0; i < P.length; i++) {
+        var p = P[i], x = p[0] * cy + p[2] * sy, z = -p[0] * sy + p[2] * cy, y = p[1] * cx - z * sx; z = p[1] * sx + z * cx;
+        var k = 2.8 / (2.8 + z); proj[i * 3] = ox + x * sc * k; proj[i * 3 + 1] = oy + y * sc * k; proj[i * 3 + 2] = z; glow[i] *= 0.93;
+      }
+      for (var r = ripples.length - 1; r >= 0; r--) {
+        var R = ripples[r]; R.r += 0.012; var c0 = P[R.i];
+        for (var n = 0; n < P.length; n++) {
+          var d = Math.hypot(P[n][0] - c0[0], P[n][1] - c0[1], P[n][2] - c0[2]);
+          if (Math.abs(d - R.r) < 0.025) glow[n] = Math.max(glow[n], R.p * (1 - R.r / 0.9));
+        }
+        if (R.r > 0.9) ripples.splice(r, 1);
+      }
+      ctx.clearRect(0, 0, W, H);
+      if (dark) ctx.globalCompositeOperation = "lighter";
+      ctx.lineWidth = 1; ctx.strokeStyle = em;
+      for (var s = 0; s < P.length; s++) {
+        if (glow[s] < 0.35 || N[s] < 0) continue;
+        ctx.globalAlpha = glow[s] * 0.6; ctx.beginPath(); ctx.moveTo(proj[s * 3], proj[s * 3 + 1]); ctx.lineTo(proj[N[s] * 3], proj[N[s] * 3 + 1]); ctx.stroke();
+      }
+      for (var m = 0; m < P.length; m++) {
+        var z2 = proj[m * 3 + 2], depth = Math.max(0, Math.min(1, 0.5 - z2 * 0.7)), g2 = glow[m];
+        ctx.globalAlpha = (0.18 + depth * 0.62 + g2 * 0.4) * (dark ? 0.55 : 1);
+        ctx.fillStyle = g2 > 0.25 ? em : base;
+        var rad = 0.7 + depth * 1.1 + g2 * 1.6;
+        ctx.fillRect(proj[m * 3] - rad, proj[m * 3 + 1] - rad, rad * 2, rad * 2);
+      }
+      ctx.globalCompositeOperation = "source-over";
+      if (!reduce && now - lastRip > 1400) { lastRip = now; ripple((Math.random() * P.length) | 0, 0.9); }
+      var F = FLOW[lang] || FLOW.en, inX = rtl ? W - 56 : 56, outX = rtl ? 84 : W - 84;
+      if (!reduce && now - lastIn > 1700) { lastIn = now; tokens.push({ k: 0, txt: F.inp[(Math.random() * F.inp.length) | 0], x0: inX, y0: H * (0.2 + Math.random() * 0.6), n: (Math.random() * P.length) | 0, t: 0 }); }
+      if (!reduce && now - lastOut > 2900) { lastOut = now; var src = (Math.random() * P.length) | 0; ripple(src, 1.1); tokens.push({ k: 1, txt: F.out[(Math.random() * F.out.length) | 0], n: src, x1: outX, y1: H * (0.22 + Math.random() * 0.56), t: 0 }); }
+      for (var q2 = tokens.length - 1; q2 >= 0; q2--) {
+        var T = tokens[q2]; T.t += 0.0085;
+        var e = 1 - Math.pow(1 - Math.min(1, T.t), 3), nx = proj[T.n * 3], ny = proj[T.n * 3 + 1], al, X, Y;
+        if (!T.k) { X = T.x0 + (nx - T.x0) * e; Y = T.y0 + (ny - T.y0) * e; al = T.t < .15 ? T.t / .15 : 1 - Math.max(0, (T.t - .8) / .2); pill(T.txt, X, Y, al, warm, dark ? "rgba(234,178,106,.14)" : "#fbefdc"); if (T.t >= 1) { ripple(T.n, 1.2); tokens.splice(q2, 1); } }
+        else { X = nx + (T.x1 - nx) * e; Y = ny + (T.y1 - ny) * e; al = T.t < .2 ? T.t / .2 : 1 - Math.max(0, (T.t - .75) / .25); pill(T.txt, X, Y, al, dark ? "#04251c" : "#ffffff", em); if (T.t >= 1) tokens.splice(q2, 1); }
+      }
+      ctx.globalAlpha = 1;
+      if (!reduce) requestAnimationFrame(frame);
+    }
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { visible = es[0].isIntersecting; }).observe(cv);
+    ripple(0, 1); requestAnimationFrame(frame);
+  })();
 
   setLang(lang);
 })();
