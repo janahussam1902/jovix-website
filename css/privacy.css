@@ -1,0 +1,10 @@
+:root { --paper: #f2f5f3; --ink: #0c2c2e; --mute: #566e69; --line: rgba(12, 44, 46, .11); --forest: #07594c; }
+@media (prefers-color-scheme: dark) { :root { --paper: #0b1215; --ink: #e3ebe8; --mute: #93a7a3; --line: rgba(220, 240, 234, .09); --forest: #4fd8af; } }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 17px/1.7 "Instrument Sans", system-ui, sans-serif; }
+main { width: min(760px, calc(100% - 40px)); margin: 0 auto; padding: 64px 0 80px; }
+a { color: var(--forest); }
+h1 { font-size: 40px; line-height: 1.15; margin: 24px 0 8px; }
+h2 { font-size: 20px; margin: 32px 0 6px; }
+p, li { color: var(--mute); }
+section + section { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--line); }
+[dir="rtl"] { font-family: "IBM Plex Sans Arabic", system-ui, sans-serif; }
