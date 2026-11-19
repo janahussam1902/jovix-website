@@ -82,7 +82,7 @@
     rc_w2: "كمنتج سحابي", rc_w2p: "من غير Odoo. سجّل، انشر وظيفة، وابدأ توظيف.", rc_w2t: "قريبًا",
     rc_cta: "احجز عرض تجريبي", rc_cta2: "سجّل في القائمة الأولى",
     priv: "الخصوصية",
-    nav7: "وكلاء AI", skip: "روح للمحتوى",
+    nav7: "وكلاء AI", skip: "روح للمحتوى", sysv_cta: "عايز السيستم ده", open_sys: "ادخل جوه السيستم",
     more_link: "شوف الشغل", rc_more: "شوف بيشتغل إزاي", wk_p2: "أكتر من 25 مشروع في Odoo والموارد البشرية والأتمتة والوكلاء والـ AI والمواقع. ودول تلاتة منهم.", wk_all: "شوف كل شغلنا",
     w_t1: "مبيعات العربيات لمصنع مكرونة", w_m1: "Odoo", w_t2: "التوظيف من الإعلان للقائمة المختصرة", w_m2: "الموارد البشرية والتوظيف", w_t3: "وكيل واتساب لموزّع أغذية", w_m3: "وكيل AI",
     br_tag: "بياناتك بتدخل، والقرارات بتطلع",
@@ -536,6 +536,7 @@
   if (panel) panel.addEventListener("click", function (e) {
     var s = e.target.closest(".shot"); if (!s) return;
     var k = s.dataset.video;
+    if (window.jovixOpenSystem) { window.jovixOpenSystem(k, s); return; }
     pv.src = "media/work_" + k + "_" + lang + ".mp4"; pv.poster = "media/work_" + k + "_" + lang + ".webp";
     pc.textContent = WORK[lang][k].t + " · " + tr("demo");
     if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
@@ -543,6 +544,7 @@
   });
   var recShot = document.getElementById("rec-shot");
   if (recShot) recShot.addEventListener("click", function () {
+    if (window.jovixOpenSystem) { window.jovixOpenSystem("hr", recShot); return; }
     pv.src = "media/work_hr_" + lang + ".mp4"; pv.poster = "media/work_hr_" + lang + ".webp";
     pc.textContent = (lang === "ar" ? "أتمتة التوظيف" : "Recruitment automation") + " · " + tr("demo");
     if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
@@ -921,6 +923,93 @@
     }
     if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { visible = es[0].isIntersecting; }).observe(cv);
     ripple(0, 1); requestAnimationFrame(frame);
+  })();
+
+  /* system viewer: a screen flies forward in 3D and opens full size; inside, systems turn like book pages */
+  (function () {
+    var sv = document.getElementById("sysv"); if (!sv) return;
+    var SYS = ["odoo", "hr", "automation", "agents", "ai", "web"];
+    var stage = document.getElementById("sysv-stage"), book = document.getElementById("sysv-book"), bg = document.getElementById("sysv-bg");
+    var title = document.getElementById("sysv-title"), meta = document.getElementById("sysv-meta"), tabs = document.getElementById("sysv-tabs"), cta = document.getElementById("sysv-cta");
+    var idx = 0, from = null, busy = false, lastFocus = null;
+    function page(k) {
+      var p = document.createElement("div"); p.className = "sysv-page";
+      p.innerHTML = '<video playsinline muted loop autoplay preload="auto" poster="media/work_' + k + '_' + lang + '.webp" src="media/work_' + k + '_' + lang + '.mp4"></video><span class="sysv-shade"></span>';
+      return p;
+    }
+    function labels() {
+      var W = WORK[lang], k = SYS[idx];
+      title.textContent = W[k].t; meta.textContent = W[k].meta + " · " + (lang === "ar" ? "بيانات تجريبية" : "Demo data");
+      tabs.innerHTML = SYS.map(function (x, i) { return '<button type="button" data-i="' + i + '" aria-pressed="' + (i === idx) + '">' + esc(W.tabs[x]) + '</button>'; }).join("");
+      cta.href = "https://wa.me/201283450444?text=" + encodeURIComponent((lang === "ar" ? "أهلًا Jovix، عايز سيستم زي: " : "Hello Jovix, I'd like a system like: ") + W[k].t);
+    }
+    function fromRect() {
+      var r = from && from.getBoundingClientRect(), f = stage.getBoundingClientRect();
+      if (!r || !r.width) return null;
+      return { dx: r.left - f.left, dy: r.top - f.top, sx: r.width / f.width, sy: r.height / f.height };
+    }
+    function open(k, el) {
+      idx = Math.max(0, SYS.indexOf(k)); from = el || null; lastFocus = document.activeElement;
+      book.innerHTML = ""; book.appendChild(page(SYS[idx])); labels();
+      sv.hidden = false; document.body.classList.add("sysv-open");
+      var g = fromRect();
+      if (!reduce && g && stage.animate) {
+        stage.animate([
+          { transformOrigin: "0 0", transform: "translate(" + g.dx + "px," + g.dy + "px) scale(" + g.sx + "," + g.sy + ")", opacity: 0.5 },
+          { transformOrigin: "0 0", transform: "perspective(1800px) translate(" + (g.dx * 0.25) + "px," + (g.dy * 0.25) + "px) scale(" + (0.75 + g.sx * 0.2) + ") rotateX(12deg) rotateY(-7deg)", opacity: 1, offset: 0.55 },
+          { transformOrigin: "0 0", transform: "none", opacity: 1 }
+        ], { duration: 950, easing: "cubic-bezier(.2,.75,.15,1)" });
+        bg.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, easing: "ease-out" });
+      }
+      document.getElementById("sysv-x").focus();
+    }
+    function close() {
+      var done = function () { sv.hidden = true; document.body.classList.remove("sysv-open"); book.innerHTML = ""; if (lastFocus && lastFocus.focus) lastFocus.focus(); };
+      var g = fromRect();
+      if (reduce || !g || !stage.animate) { done(); return; }
+      bg.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 600, easing: "ease-in", fill: "forwards" });
+      var a = stage.animate([
+        { transformOrigin: "0 0", transform: "none", opacity: 1 },
+        { transformOrigin: "0 0", transform: "perspective(1800px) translate(" + (g.dx * 0.4) + "px," + (g.dy * 0.4) + "px) scale(" + (0.7 + g.sx * 0.2) + ") rotateX(-8deg) rotateY(6deg)", opacity: 1, offset: 0.5 },
+        { transformOrigin: "0 0", transform: "translate(" + g.dx + "px," + g.dy + "px) scale(" + g.sx + "," + g.sy + ")", opacity: 0 }
+      ], { duration: 700, easing: "cubic-bezier(.5,0,.3,1)" });
+      a.onfinish = function () { bg.getAnimations().forEach(function (x) { x.cancel(); }); done(); };
+    }
+    function go(to) {
+      if (busy || to === idx) return;
+      var dir = to > idx ? 1 : -1, old = book.querySelector(".sysv-page"), rtl = document.documentElement.dir === "rtl";
+      idx = (to + SYS.length) % SYS.length;
+      var nw = page(SYS[idx]); book.insertBefore(nw, old); labels();
+      if (reduce || !old.animate) { old.remove(); return; }
+      busy = true; old.classList.add("leaving");
+      var leftEdge = (dir > 0) !== rtl, ang = leftEdge ? -180 : 180;
+      old.style.transformOrigin = leftEdge ? "0 50%" : "100% 50%";
+      var shade = old.querySelector(".sysv-shade");
+      shade.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 900 });
+      nw.animate([{ filter: "brightness(.7)" }, { filter: "brightness(1)" }], { duration: 900, easing: "ease-out" });
+      old.animate([{ transform: "rotateY(0deg)" }, { transform: "rotateY(" + ang / 2 + "deg) translateZ(40px)", offset: 0.5 }, { transform: "rotateY(" + ang + "deg)" }],
+        { duration: 900, easing: "cubic-bezier(.45,.05,.25,1)" }).onfinish = function () { old.remove(); busy = false; };
+    }
+    document.addEventListener("click", function (e) {
+      var t = e.target.closest("[data-sys]"); if (!t) return;
+      e.preventDefault(); open(t.dataset.sys, t.querySelector("img") || t);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (sv.hidden) { var t = e.target.closest && e.target.closest("[data-sys][role=button]"); if (t && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); open(t.dataset.sys, t.querySelector("img") || t); } return; }
+      var rtl = document.documentElement.dir === "rtl";
+      if (e.key === "Escape") close();
+      else if (e.key === "ArrowRight") go(idx + (rtl ? -1 : 1));
+      else if (e.key === "ArrowLeft") go(idx + (rtl ? 1 : -1));
+    });
+    document.getElementById("sysv-x").addEventListener("click", close);
+    bg.addEventListener("click", close);
+    document.getElementById("sysv-next").addEventListener("click", function () { go(idx + 1); });
+    document.getElementById("sysv-prev").addEventListener("click", function () { go(idx - 1); });
+    tabs.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) go(+b.dataset.i); });
+    var x0 = null;
+    book.addEventListener("pointerdown", function (e) { x0 = e.clientX; });
+    book.addEventListener("pointerup", function (e) { if (x0 === null) return; var dx = e.clientX - x0, rtl = document.documentElement.dir === "rtl"; x0 = null; if (Math.abs(dx) > 50) go(idx + ((dx < 0) !== rtl ? 1 : -1)); });
+    window.jovixOpenSystem = open;
   })();
 
   setLang(lang);
