@@ -944,3 +944,8 @@ main, footer { transition: opacity .5s cubic-bezier(.2, .8, .2, 1), transform .5
 :root[dir="rtl"] .mo-sweep { translate: 140px 0; }
 :root[dir="rtl"] .mo-sweep.go { animation-name: sweep2r; }
 @keyframes sweep2r { 0% { opacity: 1; translate: 140px 0; } 100% { opacity: 0; translate: calc(-100cqw - 20px) 0; } }
+
+/* footer line: the solution stands out, in the colour that means solved */
+.foot-brand p { font-size: 17px; }
+.foot-brand p .good { display: block; margin-top: 6px; font: 700 clamp(24px, 2.2vw, 30px)/1.2 var(--display); letter-spacing: -0.015em; color: var(--forest); }
+:root[lang="ar"] .foot-brand p .good { letter-spacing: 0; line-height: 1.4; }
