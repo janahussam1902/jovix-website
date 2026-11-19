@@ -82,7 +82,7 @@
     rc_w2: "كمنتج سحابي", rc_w2p: "من غير Odoo. سجّل، انشر وظيفة، وابدأ توظيف.", rc_w2t: "قريبًا",
     rc_cta: "احجز عرض تجريبي", rc_cta2: "سجّل في القائمة الأولى",
     priv: "الخصوصية",
-    nav7: "وكلاء AI", skip: "روح للمحتوى", sysv_cta: "عايز السيستم ده", open_sys: "ادخل جوه السيستم",
+    nav7: "وكلاء AI", skip: "روح للمحتوى", cube_pre: "بنبني", sysv_cta: "عايز السيستم ده", open_sys: "ادخل جوه السيستم",
     more_link: "شوف الشغل", rc_more: "شوف بيشتغل إزاي", wk_p2: "أكتر من 25 مشروع في Odoo والموارد البشرية والأتمتة والوكلاء والـ AI والمواقع. ودول تلاتة منهم.", wk_all: "شوف كل شغلنا",
     w_t1: "مبيعات العربيات لمصنع مكرونة", w_m1: "Odoo", w_t2: "التوظيف من الإعلان للقائمة المختصرة", w_m2: "الموارد البشرية والتوظيف", w_t3: "وكيل واتساب لموزّع أغذية", w_m3: "وكيل AI",
     br_tag: "بياناتك بتدخل، والقرارات بتطلع",
@@ -369,9 +369,9 @@
         t.classList.toggle("hi", !!sc.hi && k < (sc.hn || 4)); chaos(t, k);
       });
       if (reduce) { solve(d, sc); return; }
-      later(o.wait || 2600, function () { sweep.classList.remove("go"); void sweep.offsetWidth; sweep.classList.add("go"); });
-      later((o.wait || 2600) + 500, function () { solve(d, sc); });
-      later(o.cycle || 8600, function () {
+      later(o.wait || 1800, function () { sweep.classList.remove("go"); void sweep.offsetWidth; sweep.classList.add("go"); });
+      later((o.wait || 1800) + 400, function () { solve(d, sc); });
+      later(o.cycle || 6400, function () {
         if (!visible) { pending = true; return; }
         play(o.tabs ? (idx + 1) % d.scenes.length : idx);
       });
@@ -469,8 +469,8 @@
   };
 
   var heroMorph = makeMorph(document.getElementById("morph"), { n: 12, tabs: true, data: function () { return MO[lang]; } });
-  var roleMorph = makeMorph(document.getElementById("role-morph"), { n: 8, data: function () { return MO_ROLE[lang]; }, cycle: 7600, wait: 2200 });
-  var trustMorph = makeMorph(document.getElementById("trust-morph"), { n: 8, data: function () { return MO_TRUST[lang]; }, cycle: 8200, wait: 2600 });
+  var roleMorph = makeMorph(document.getElementById("role-morph"), { n: 8, data: function () { return MO_ROLE[lang]; }, cycle: 6000, wait: 1600 });
+  var trustMorph = makeMorph(document.getElementById("trust-morph"), { n: 8, data: function () { return MO_TRUST[lang]; }, cycle: 6400, wait: 1800 });
   function moBuild() { heroMorph.play(heroMorph.current()); roleMorph.play(role); trustMorph.play(0); }
 
   /* roles */
@@ -678,7 +678,7 @@
     jrStage.innerHTML = '<div class="jr-scene"><h3>' + esc(d.h) + '</h3><p>' + esc(d.p) + '</p>' + d.x + '</div>';
     jrStage.querySelectorAll(".bub, .map span, .map em, .checks span, .visits span").forEach(function (n, k) { n.style.animationDelay = (0.15 + k * 0.32) + "s"; });
     jrStage.querySelectorAll(".tr i").forEach(function (n) { n.style.setProperty("--w", n.classList.contains("w60") ? "60%" : "100%"); n.style.animationDelay = n.classList.contains("d3") ? ".9s" : n.classList.contains("d2") ? ".5s" : ".1s"; });
-    if (!reduce) jrTimer = setTimeout(function () { if (jrVisible) jrShow((jrI + 1) % 5); else jrTimer = null; }, 5200);
+    if (!reduce) jrTimer = setTimeout(function () { if (jrVisible) jrShow((jrI + 1) % 5); else jrTimer = null; }, 4200);
   }
   jrSteps.forEach(function (b) { b.addEventListener("click", function () { jrShow(+b.dataset.i); }); });
   if (jrStage && "IntersectionObserver" in window) new IntersectionObserver(function (es) { jrVisible = es[0].isIntersecting; if (jrVisible && !jrTimer) jrShow(jrI); }, { threshold: .35 }).observe(jrStage);
@@ -731,7 +731,7 @@
     agFeed.innerHTML = "";
     var at = function (ms, fn) { setTimeout(function () { if (run === agRun) fn(); }, ms); };
     a.s.forEach(function (st) {
-      if (st[0] === "out") { at(tm, function () { var ty = document.createElement("div"); ty.className = "typing"; ty.innerHTML = "<i></i><i></i><i></i>"; agFeed.appendChild(ty); }); tm += 900; }
+      if (st[0] === "out") { at(tm, function () { var ty = document.createElement("div"); ty.className = "typing"; ty.innerHTML = "<i></i><i></i><i></i>"; agFeed.appendChild(ty); }); tm += 650; }
       at(tm, function () {
         var t = agFeed.querySelector(".typing"); if (t) t.remove();
         var el = document.createElement("div");
@@ -741,9 +741,9 @@
         agFeed.appendChild(el);
         while (agFeed.children.length > 7) agFeed.firstChild.remove();
       });
-      tm += st[0] === "sys" ? 800 : 1500;
+      tm += st[0] === "sys" ? 600 : 1100;
     });
-    total = tm + 2600;
+    total = tm + 1800;
     var bar = agTabs.querySelector('[aria-selected="true"] .bar'); if (bar) bar.style.animationDuration = (total / 1000) + "s";
     at(total, function () { if (agVisible && !reduce) { agI = (agI + 1) % 4; agRender(); agPlay(); } else agStarted = false; });
   }
@@ -879,14 +879,14 @@
       if (!visible) { requestAnimationFrame(frame); return; }
       var cs = getComputedStyle(document.documentElement), dark = document.documentElement.getAttribute("data-theme") === "dark", rtl = document.documentElement.dir === "rtl";
       var base = cs.getPropertyValue("--forest").trim(), em = cs.getPropertyValue("--emerald").trim(), warm = cs.getPropertyValue("--warm").trim(), tint = cs.getPropertyValue("--tint").trim();
-      var t = (now - t0) / 1000, ry = (reduce ? 0.9 : t * 0.22) + mx * 0.9, rx = -0.3 + my * 0.35;
+      var t = (now - t0) / 1000, ry = (reduce ? 0.9 : t * 0.32) + mx * 0.9, rx = -0.3 + my * 0.35;
       var cy = Math.cos(ry), sy = Math.sin(ry), cx = Math.cos(rx), sx = Math.sin(rx), sc = Math.min(W * 0.44, H * 0.6), ox = W / 2, oy = H * 0.5;
       for (var i = 0; i < P.length; i++) {
         var p = P[i], x = p[0] * cy + p[2] * sy, z = -p[0] * sy + p[2] * cy, y = p[1] * cx - z * sx; z = p[1] * sx + z * cx;
         var k = 2.8 / (2.8 + z); proj[i * 3] = ox + x * sc * k; proj[i * 3 + 1] = oy + y * sc * k; proj[i * 3 + 2] = z; glow[i] *= 0.93;
       }
       for (var r = ripples.length - 1; r >= 0; r--) {
-        var R = ripples[r]; R.r += 0.012; var c0 = P[R.i];
+        var R = ripples[r]; R.r += 0.018; var c0 = P[R.i];
         for (var n = 0; n < P.length; n++) {
           var d = Math.hypot(P[n][0] - c0[0], P[n][1] - c0[1], P[n][2] - c0[2]);
           if (Math.abs(d - R.r) < 0.025) glow[n] = Math.max(glow[n], R.p * (1 - R.r / 0.9));
@@ -908,12 +908,12 @@
         ctx.fillRect(proj[m * 3] - rad, proj[m * 3 + 1] - rad, rad * 2, rad * 2);
       }
       ctx.globalCompositeOperation = "source-over";
-      if (!reduce && now - lastRip > 1400) { lastRip = now; ripple((Math.random() * P.length) | 0, 0.9); }
+      if (!reduce && now - lastRip > 850) { lastRip = now; ripple((Math.random() * P.length) | 0, 0.9); }
       var F = FLOW[lang] || FLOW.en, inX = rtl ? W - 56 : 56, outX = rtl ? 84 : W - 84;
-      if (!reduce && now - lastIn > 1700) { lastIn = now; tokens.push({ k: 0, txt: F.inp[(Math.random() * F.inp.length) | 0], x0: inX, y0: H * (0.2 + Math.random() * 0.6), n: (Math.random() * P.length) | 0, t: 0 }); }
-      if (!reduce && now - lastOut > 2900) { lastOut = now; var src = (Math.random() * P.length) | 0; ripple(src, 1.1); tokens.push({ k: 1, txt: F.out[(Math.random() * F.out.length) | 0], n: src, x1: outX, y1: H * (0.22 + Math.random() * 0.56), t: 0 }); }
+      if (!reduce && now - lastIn > 1200) { lastIn = now; tokens.push({ k: 0, txt: F.inp[(Math.random() * F.inp.length) | 0], x0: inX, y0: H * (0.2 + Math.random() * 0.6), n: (Math.random() * P.length) | 0, t: 0 }); }
+      if (!reduce && now - lastOut > 2000) { lastOut = now; var src = (Math.random() * P.length) | 0; ripple(src, 1.1); tokens.push({ k: 1, txt: F.out[(Math.random() * F.out.length) | 0], n: src, x1: outX, y1: H * (0.22 + Math.random() * 0.56), t: 0 }); }
       for (var q2 = tokens.length - 1; q2 >= 0; q2--) {
-        var T = tokens[q2]; T.t += 0.0085;
+        var T = tokens[q2]; T.t += 0.012;
         var e = 1 - Math.pow(1 - Math.min(1, T.t), 3), nx = proj[T.n * 3], ny = proj[T.n * 3 + 1], al, X, Y;
         if (!T.k) { X = T.x0 + (nx - T.x0) * e; Y = T.y0 + (ny - T.y0) * e; al = T.t < .15 ? T.t / .15 : 1 - Math.max(0, (T.t - .8) / .2); pill(T.txt, X, Y, al, warm, dark ? "rgba(234,178,106,.14)" : "#fbefdc"); if (T.t >= 1) { ripple(T.n, 1.2); tokens.splice(q2, 1); } }
         else { X = nx + (T.x1 - nx) * e; Y = ny + (T.y1 - ny) * e; al = T.t < .2 ? T.t / .2 : 1 - Math.max(0, (T.t - .75) / .25); pill(T.txt, X, Y, al, dark ? "#04251c" : "#ffffff", em); if (T.t >= 1) tokens.splice(q2, 1); }
@@ -1010,6 +1010,70 @@
     book.addEventListener("pointerdown", function (e) { x0 = e.clientX; });
     book.addEventListener("pointerup", function (e) { if (x0 === null) return; var dx = e.clientX - x0, rtl = document.documentElement.dir === "rtl"; x0 = null; if (Math.abs(dx) > 50) go(idx + ((dx < 0) !== rtl ? 1 : -1)); });
     window.jovixOpenSystem = open;
+  })();
+
+  /* isometric company: each part of the business is a block, data moves through the AI block in the middle */
+  (function () {
+    var plane = document.getElementById("iso-plane"); if (!plane) return;
+    var PARTS = [
+      ["Sales", "المبيعات"], ["Stock", "المخازن"], ["Accounting", "الحسابات"],
+      ["HR", "الموارد البشرية"], ["AI", "AI"], ["WhatsApp", "واتساب"],
+      ["Website", "الموقع"], ["Reports", "التقارير"], ["CRM", "العملاء"]
+    ];
+    var S = 120, T = 92, tiles = [], visible = false, built = false;
+    PARTS.forEach(function (p, i) {
+      var el = document.createElement("div"), col = i % 3, row = (i / 3) | 0;
+      el.className = "iso-t" + (i === 4 ? " core" : "");
+      el.style.left = (col * S) + "px"; el.style.top = (row * S) + "px";
+      el.innerHTML = '<span class="iso-l"></span>';
+      plane.appendChild(el); tiles.push({ el: el, x: col * S + T / 2, y: row * S + T / 2, z: i === 4 ? 64 : 22 + ((i * 7) % 3) * 10 });
+    });
+    function labels() { tiles.forEach(function (t, i) { t.el.firstChild.textContent = PARTS[i][lang === "ar" ? 1 : 0]; }); }
+    labels(); document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", labels); });
+    function lift(t, extra) { t.el.style.setProperty("--z", (t.z + (extra || 0)) + "px"); }
+    function build() {
+      built = true;
+      tiles.forEach(function (t, i) { t.el.style.setProperty("--z", "0px"); setTimeout(function () { lift(t); t.el.classList.add("up"); }, reduce ? 0 : 120 + i * 110); });
+    }
+    function packet(from, to, cls, done) {
+      var p = document.createElement("span"); p.className = "iso-p " + cls; plane.appendChild(p);
+      p.style.transform = "translate3d(" + from.x + "px," + from.y + "px," + (from.z + 16) + "px)";
+      requestAnimationFrame(function () { requestAnimationFrame(function () { p.style.transform = "translate3d(" + to.x + "px," + to.y + "px," + (to.z + 16) + "px)"; }); });
+      setTimeout(function () { p.remove(); if (done) done(); }, 760);
+    }
+    function tick() {
+      if (!visible || reduce) return;
+      var core = tiles[4], src = tiles[[0, 1, 2, 3, 5, 6, 7, 8][(Math.random() * 8) | 0]];
+      lift(src, 14); src.el.classList.add("hot");
+      setTimeout(function () { lift(src); src.el.classList.remove("hot"); }, 520);
+      packet(src, core, "in", function () {
+        lift(core, 12); core.el.classList.add("hot");
+        setTimeout(function () { lift(core); core.el.classList.remove("hot"); }, 380);
+        var dst = tiles[[0, 1, 2, 3, 5, 6, 7, 8][(Math.random() * 8) | 0]];
+        packet(core, dst, "out", function () { lift(dst, 10); dst.el.classList.add("ok"); setTimeout(function () { lift(dst); dst.el.classList.remove("ok"); }, 500); });
+      });
+    }
+    setInterval(tick, 650);
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { visible = es[0].isIntersecting; if (visible && !built) build(); }, { threshold: .3 }).observe(plane);
+    else { visible = true; build(); }
+  })();
+
+  /* "We build ..." with the last word turning like a cube */
+  (function () {
+    var cubes = document.querySelectorAll(".cube"); if (!cubes.length) return;
+    var WORDS = {
+      en: ["Odoo systems", "hiring automation", "AI agents", "automations", "dashboards", "company websites"],
+      ar: ["أنظمة Odoo", "أتمتة التوظيف", "وكلاء AI", "أتمتة الشغل", "لوحات متابعة", "مواقع الشركات"]
+    };
+    var i = 0;
+    function set(c) { var f = c.querySelectorAll("b"); f[0].textContent = WORDS[lang][i % 6]; f[1].textContent = WORDS[lang][(i + 1) % 6]; }
+    cubes.forEach(set);
+    document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", function () { cubes.forEach(set); }); });
+    if (reduce) return;
+    setInterval(function () {
+      cubes.forEach(function (c) { c.classList.add("turn"); });
+      setTimeout(function () { i++; cubes.forEach(function (c) { c.classList.remove("turn"); set(c); }); }, 620);
+    }, 1900);
   })();
 
   setLang(lang);
