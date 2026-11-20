@@ -349,7 +349,7 @@ dialog p { color: #cfe0db; font-size: 14px; margin-top: 10px; }
 .back .turn { color: #8fa9a3; }
 
 /* tilt */
-.tilt { transition: transform .35s cubic-bezier(.2, .7, .2, 1); transform-style: preserve-3d; will-change: transform; }
+.tilt { transition: transform .35s cubic-bezier(.2, .7, .2, 1); transform-style: preserve-3d; }
 
 
 /* journey */
@@ -922,7 +922,6 @@ main, footer { transition: opacity .5s cubic-bezier(.2, .8, .2, 1), transform .5
 .sysv-book, .sysv-top, .sysv-foot { min-width: 0; }
 
 /* ---------- performance ---------- */
-.flow-box svg { will-change: contents; }
 .mo-body { contain: layout paint; }
 .ag-feed, .d-view, .jr-stage { contain: layout paint; }
 .nav { backdrop-filter: none; -webkit-backdrop-filter: none; background: color-mix(in srgb, var(--paper) 96%, transparent); }
@@ -936,7 +935,7 @@ main, footer { transition: opacity .5s cubic-bezier(.2, .8, .2, 1), transform .5
 .pkt-dot { position: absolute; left: -6px; top: -6px; width: 12px; height: 12px; border-radius: 50%; background: var(--emerald); box-shadow: 0 0 10px var(--emerald); will-change: transform; }
 
 .mo-body { container-type: size; }
-.mo-t { left: 0; top: 0; translate: calc(var(--x, 0) * 1cqw) calc(var(--y, 0) * 1cqh); will-change: translate, transform; }
+.mo-t { left: 0; top: 0; translate: calc(var(--x, 0) * 1cqw) calc(var(--y, 0) * 1cqh); }
 :root[dir="rtl"] .mo-t { left: auto; right: 0; translate: calc(var(--x, 0) * -1cqw) calc(var(--y, 0) * 1cqh); }
 .mo-sweep { inset-inline-start: 0 !important; translate: -140px 0; will-change: translate; }
 .mo-sweep.go { animation: sweep2 1s cubic-bezier(.5, 0, .3, 1) forwards; }
@@ -949,3 +948,23 @@ main, footer { transition: opacity .5s cubic-bezier(.2, .8, .2, 1), transform .5
 .foot-brand p { font-size: 17px; }
 .foot-brand p .good { display: block; margin-top: 6px; font: 700 clamp(24px, 2.2vw, 30px)/1.2 var(--display); letter-spacing: -0.015em; color: var(--forest); }
 :root[lang="ar"] .foot-brand p .good { letter-spacing: 0; line-height: 1.4; }
+
+/* what we solve: each card reads as a problem and the fix that replaces it */
+.fixes { padding: 40px 0 20px; }
+.fx-head { max-width: 46em; margin-bottom: 36px; }
+.fx-head h2 { font-size: clamp(28px, 3.2vw, 42px); margin-top: 12px; }
+.fx-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.fx { display: flex; flex-direction: column; gap: 14px; padding: 24px 22px 26px; border-radius: 22px; background: var(--surface); border: 1px solid var(--line); color: var(--ink); text-decoration: none; transition: transform .35s cubic-bezier(.2, .7, .2, 1), border-color .35s; }
+.fx-tag { align-self: flex-start; font-size: 13.5px; font-weight: 600; color: var(--forest); background: var(--tint); padding: 5px 12px; border-radius: 99px; }
+.fx-pb { color: var(--mute); font-size: 16px; line-height: 1.5; padding-inline-start: 14px; border-inline-start: 2px solid var(--warm); }
+.fx-so { margin-top: auto; font-weight: 600; font-size: 17px; line-height: 1.45; padding-inline-start: 14px; border-inline-start: 2px solid var(--emerald); }
+.fx-so::before { content: "\2192\00a0"; color: var(--forest); }
+:root[dir="rtl"] .fx-so::before { content: "\2190\00a0"; }
+@media (hover: hover) { .fx:hover { transform: translateY(-4px); border-color: var(--emerald); } }
+.fx-steps { list-style: none; display: flex; flex-wrap: wrap; gap: 12px 28px; margin: 30px 0 0; padding: 0; color: var(--mute); font-size: 16px; }
+.fx-steps li { display: flex; align-items: center; gap: 10px; }
+.fx-steps b { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--solid); color: var(--on-solid); font-size: 13.5px; }
+@media (max-width: 1000px) { .fx-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .fx-grid { grid-template-columns: minmax(0, 1fr); } .fixes { padding-top: 24px; } }
+/* nothing (including 3D entrance tilt) can ever push the page sideways on phones */
+html, body { overflow-x: clip; }

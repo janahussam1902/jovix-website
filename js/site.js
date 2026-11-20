@@ -4,9 +4,15 @@
 
   var AR = {
     nav1: "خدماتنا", nav2: "AI لفريقك", nav3: "شغلنا", nav4: "ليه Jovix", nav5: "تواصل معنا", wa: "واتساب",
-    h_label: "أنظمة، أتمتة، ذكاء اصطناعي ومواقع",
+    h_label: "بنحل مشاكل الشغل في شركتك",
  h_2: "والحل علينا.",
-    h_lead: "Jovix فريق هندسي بيبني اللي الشركة بتشتغل عليه: Odoo وأنظمة إدارة الأعمال، الموارد البشرية والتوظيف، الأتمتة، وكلاء الذكاء الاصطناعي، حلول AI لكل فريق، ومواقع الشركات. بنطوّر اللي عندك بالفعل، أو نبنيه من جديد لو ده الأنسب.",
+    h_lead: "احكيلنا إيه اللي معطّل شغلك، وإحنا نبني الحل: وكلاء ذكاء اصطناعي، أتمتة، موقع أقوى، أو أدوات تشتغل فوق الـ Odoo اللي عندك. شغل كان بياخد ساعات يخلص في دقايق، وبنفضل معاك بعد التسليم.",
+    fx_label: "بنحل إيه", fx_h: "أي حاجة في شركتك بطيئة، أو يدوية، أو بتضيّع عليك عملاء، بنبنيلها حل.",
+    fx1t: "أتمتة", fx1p: "ساعات بتضيع في نقل بيانات بين الشيتات والسيستم", fx1s: "الأتمتة تخلّصه في دقايق ومن غير غلط",
+    fx2t: "وكلاء AI", fx2p: "العملاء بيستنوا ساعات لحد ما حد يرد على الواتساب", fx2s: "وكيل AI بيرد فورًا، ليل ونهار",
+    fx3t: "مواقع", fx3p: "موقع ضعيف ومش بروفيشنال والعملاء بتمشي بسببه", fx3s: "موقع قوي معمول على مقاس شغلك يكسب ثقتهم",
+    fx4t: "Odoo", fx4p: "عندك Odoo بس الفريق لسه بيشتغل بره السيستم", fx4s: "بنظبطه ونزوّد عليه لحد ما يمشي على طريقة شغلك",
+    fxs1: "تشرحلنا المشكلة", fxs2: "نبنيلك الحل على مقاسها", fxs3: "ونفضل معاك بعد التسليم",
     h_cta1: "ابدأ مشروعك", h_cta2: "شوف شغلنا", h_s1: "أول مكالمة مجانية", h_s2: "عرض مكتوب", h_s3: "عربي وإنجليزي",
     h_cap: "وكيل خدمة عملاء بيرد على الطلبات في واتساب", demo: "بيانات تجريبية",
     f1b: "Odoo من 14 لـ 19", f1s: "تسطيب وموديولات مخصصة وتحديث نسخ",
@@ -855,10 +861,10 @@
 
   /* statement: words light up as the reader scrolls through it */
   var STMT = {
-    en: "Every company has work that *repeats,* *waits* or gets *lost* between people. We find it, _build_ _the_ _fix,_ and stay until it _runs_ _on_ _its_ _own._",
+    en: "Every company has work that *repeats,* *waits* or gets *lost* between people. We find it, _build_ _the_ _solution,_ and stay until it _runs_ _on_ _its_ _own._",
     ar: "كل شركة فيها شغل *بيتكرر،* أو *بيستنى،* أو *بيضيع* بين الناس. إحنا بنلاقيه، _ونبني_ _الحل،_ ونفضل معاك لحد ما _يمشي_ _لوحده._"
   };
-  var stmtEl = document.getElementById("stmt"), stmtWords = [];
+  var stmtEl = document.getElementById("stmt"), stmtWords = [], stmtLit = -1;
   function stmtBuild() {
     if (!stmtEl) return;
     stmtEl.innerHTML = STMT[lang].split(" ").map(function (w) {
@@ -866,27 +872,34 @@
       if (/^\*.*\*$/.test(w)) { cls += " warm-w"; w = w.slice(1, -1); } else if (/^_.*_$/.test(w)) { cls += " green-w"; w = w.slice(1, -1); }
       return '<span class="' + cls + '">' + esc(w) + '</span>';
     }).join(" ");
-    stmtWords = stmtEl.querySelectorAll(".w"); stmtTick();
+    stmtWords = stmtEl.querySelectorAll(".w"); stmtLit = -1; stmtTick();
   }
   function stmtTick() {
     if (!stmtEl || !stmtWords.length) return;
     var r = stmtEl.getBoundingClientRect(), vh = window.innerHeight;
     var p = reduce ? 1 : Math.min(1, Math.max(0, (vh * 0.85 - r.top) / (r.height + vh * 0.35)));
     var lit = Math.round(p * stmtWords.length);
+    if (lit === stmtLit) return;
+    stmtLit = lit;
     stmtWords.forEach(function (w, i) { w.classList.toggle("on", i < lit); });
   }
 
   /* services: cards stack in 3D as the next one slides over */
   var stack = document.querySelectorAll(".stack-card");
+  var stackBox = document.querySelector(".stack");
   function stackTick() {
     if (!stack.length || reduce) return;
+    var box = stackBox.getBoundingClientRect();
+    if (box.bottom < -200 || box.top > window.innerHeight + 200) return;
+    /* read every position first, then write, so the browser lays out once per frame */
+    var tops = [], hs = [];
+    stack.forEach(function (c) { tops.push(c.getBoundingClientRect().top); hs.push(c.offsetHeight); });
     stack.forEach(function (c, i) {
-      var next = stack[i + 1], inner = c.firstElementChild;
-      if (!next) { inner.style.transform = ""; inner.style.opacity = ""; return; }
-      var top = c.getBoundingClientRect().top, nTop = next.getBoundingClientRect().top, h = c.offsetHeight;
-      var k = Math.min(1, Math.max(0, 1 - (nTop - top) / h));
-      inner.style.transform = "perspective(1400px) translateY(" + (-k * 18).toFixed(1) + "px) scale(" + (1 - k * 0.06).toFixed(3) + ") rotateX(" + (k * 6).toFixed(2) + "deg)";
-      inner.style.opacity = (1 - k * 0.25).toFixed(3);
+      var inner = c.firstElementChild;
+      if (i === stack.length - 1) { inner.style.transform = ""; inner.style.opacity = ""; return; }
+      var k = Math.min(1, Math.max(0, 1 - (tops[i + 1] - tops[i]) / hs[i]));
+      inner.style.transform = k ? "perspective(1400px) translateY(" + (-k * 18).toFixed(1) + "px) scale(" + (1 - k * 0.06).toFixed(3) + ") rotateX(" + (k * 6).toFixed(2) + "deg)" : "";
+      inner.style.opacity = k ? (1 - k * 0.25).toFixed(3) : "";
     });
   }
   var ticking = false;
@@ -919,6 +932,12 @@
   /* the brain: a 3D cortex of points that turns slowly; data arrives, activity ripples across it, results leave */
   (function () {
     var cv = document.getElementById("brain"); if (!cv || !cv.getContext) return;
+    /* built only when the section is near, so opening the page stays light */
+    if ("IntersectionObserver" in window) {
+      var near = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { near.disconnect(); init(); } }, { rootMargin: "700px 0px" });
+      near.observe(cv);
+    } else init();
+    function init() {
     var ctx = cv.getContext("2d"), seed = 5;
     var rnd = function () { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
     var parts = [], P = [], N = [], ripples = [], tokens = [];
@@ -986,7 +1005,8 @@
       ctx.fill(); ctx.fillStyle = col; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(text, x, y + 0.5);
     }
     function frame(now) {
-      if (!visible || document.hidden || now - lastDraw < 32) { requestAnimationFrame(frame); return; }
+      if (!visible || document.hidden) { running = false; return; }
+      if (now - lastDraw < 32) { requestAnimationFrame(frame); return; }
       lastDraw = now;
       var dark = COL.dark, rtl = document.documentElement.dir === "rtl", base = COL.base, em = COL.em, warm = COL.warm;
       var t = (now - t0) / 1000, ry = (reduce ? 0.9 : t * 0.32) + mx * 0.9, rx = -0.3 + my * 0.35;
@@ -1032,8 +1052,12 @@
       ctx.globalAlpha = 1;
       if (!reduce) requestAnimationFrame(frame);
     }
-    if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { visible = es[0].isIntersecting; }).observe(cv);
-    ripple(0, 1); requestAnimationFrame(frame);
+    var running = false;
+    function wake() { if (running || !visible || document.hidden) return; running = true; requestAnimationFrame(frame); }
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { visible = es[0].isIntersecting; wake(); }).observe(cv);
+    document.addEventListener("visibilitychange", wake);
+    ripple(0, 1); wake();
+    }
   })();
 
   /* system viewer: a screen flies forward in 3D and opens full size; inside, systems turn like book pages */
@@ -1192,8 +1216,13 @@
     boxes.forEach(build);
     document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", function () { boxes.forEach(build); }); });
     if (reduce) return;
+    var onScreen = new Set();
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) onScreen.add(e.target); else onScreen.delete(e.target); }); });
+      boxes.forEach(function (b) { io.observe(b); });
+    } else boxes.forEach(function (b) { onScreen.add(b); });
     setInterval(function () {
-      if (document.hidden) return;
+      if (document.hidden || !onScreen.size) return;
       i = (i + 1) % 6;
       var word = WORDS[lang][i];
       boxes.forEach(function (box) {
