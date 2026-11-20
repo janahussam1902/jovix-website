@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://jovix-solutions-official.vercel.app/sitemap.xml
